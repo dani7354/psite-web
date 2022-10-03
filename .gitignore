@@ -1,0 +1,12 @@
+.DS_STORE
+*.swp
+*.phar
+*.lock
+
+.idea/
+.vscode/
+vendor/
+psite_web/composer-setup.php
+psite_web/apache/log/*
+psite_web/php/fpm/log/*
+psite-web/apache/htpasswd/.htpasswd

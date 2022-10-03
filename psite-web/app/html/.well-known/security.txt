@@ -1,0 +1,24 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Canonical: https://www.stuhrs.dk/.well-known/security.txt
+Contact: mailto:d@stuhrs.dk
+Encryption: https://www.stuhrs.dk/assets/files/public_key.asc
+Preferred-Languages: en, fr, da
+Expires: 2022-12-31T10:00:00z
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEmsoACsEdUdKuDgLAj675Wo/MoEkFAmMso+YACgkQj675Wo/M
+oEkcUQ/+JvcX7o8U4J/DJlA7mVZ54PGH8bBJzZP2lYedk5Z3li3ijzJEDoD13G7u
+s6cftt8t3ToQ4hCewVNs8C2GnvYjs8PtVvtKSdni5miGo4E4kLcWQyQ4+JPPIiGx
+z8QULuWKsDqTKgCWXnaIq9fIbTjkN1OaUEEgMofrJgeOhqCF6X0qhUA588689XlG
+Np0ZOvI0doDPiQEAvGwBdjd+7zbqeGSTSJmALgndNTu/s4s9JR/aWxBHAnxfSKNO
+cB6GGmc0HnszyMPw4IK8JVo5w99BGisEagxIroIC7Zx419WEdo3p4LW/LGF37Td5
+Q7Qz0V5EwjqPScSkdgywihbWpICiQdaSC0tDLMRmNWVsknaZ3qA7R2Bz+l6W4NB8
+lMVUxI1DbtLHey1OA8tW58+Wy3SX/h/GTHjc0zIi6jwLLYenF57qaAFL6wXsuWMW
+jntU9GuyHXaJLdKutaYyDSdWyeC18nAprgw7gIvboNaVznGOKQcB3zgh70ZKeF7R
+Hj4/SPB+7LE8BHJUvPz43Rjmfaydv5x67YoYupjE+4SqhucGyOc8BIl6YtD/B1Cb
+b0zkKL0CXxr4J/Ht7cygfdzeOFZdtHpwJKKBkXYPuct3Rm3LQPhyPK8rGIiQ5XSt
+hrHtQqW5NP9RPqcpHi2bGwHCCh0+/S8gqerdt86S4qGqIqOpotk=
+=bbeY
+-----END PGP SIGNATURE-----

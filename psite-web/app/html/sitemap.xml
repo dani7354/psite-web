@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://www.stuhrs.dk/</loc>
+		<lastmod>2022-09-14T18:55:25+01:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.stuhrs.dk/cv/</loc>
+		<lastmod>2022-09-14T18:55:25+01:00</lastmod>
+	</url>
+    <url>
+		<loc>https://www.stuhrs.dk/projects/</loc>
+		<lastmod>2022-09-14T18:55:25+01:00</lastmod>
+	</url>
+     <url>
+		<loc>https://www.stuhrs.dk/contact/</loc>
+		<lastmod>2022-09-14T18:55:25+01:00</lastmod>
+	</url>
+</urlset>
