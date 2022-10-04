@@ -1,1 +1,1 @@
-# psite_web
+# psite-web
