@@ -19,7 +19,8 @@
             $connection = $this->db_connector->get_connection();
             $query = $connection->query("SELECT Id, Title, Url, Description, Image, IsVisible
             FROM Project
-            WHERE IsVisible = 1");
+            WHERE IsVisible = 1
+            ORDER BY OrderNumber");
 
             $projects = [];
 
@@ -32,7 +33,7 @@
                     $row["Description"],
                     $row["Image"],
                     $row["IsVisible"]);
-                
+
                 array_push($projects, $project);
             }
 
@@ -41,4 +42,3 @@
             return $projects;
         }
     }
-    
