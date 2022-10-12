@@ -28,7 +28,6 @@
             {
                 $project = new Project(
                     $row["Id"],
-                    $row["OrderNumber"]
                     $row["Title"],
                     $row["Url"],
                     $row["Description"],

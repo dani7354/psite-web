@@ -5,7 +5,6 @@ class Project
 {
     public function __construct(
         public readonly int $id,
-        public readonly int $order_number,
         public readonly string $title,
         public readonly string $url,
         public readonly string $description,
