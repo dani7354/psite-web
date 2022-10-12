@@ -17,7 +17,7 @@
         public function all() : array
         {
             $connection = $this->db_connector->get_connection();
-            $query = $connection->query("SELECT Id, OrderNumber, Title, Url, Description, Image, IsVisible
+            $query = $connection->query("SELECT Id, Title, Url, Description, Image, IsVisible
             FROM Project
             WHERE IsVisible = 1
             ORDER BY OrderNumber");
