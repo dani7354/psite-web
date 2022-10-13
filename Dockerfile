@@ -97,10 +97,11 @@ RUN chown -R www-data:www-data $wwwroot
 RUN service apache2 restart
 
 # Copy start script
-COPY ./psite-web/docker/start.sh start.sh
+COPY ./psite-web/docker/start.sh /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh
 
 EXPOSE 80
 EXPOSE 443
 
-CMD [ "./start.sh" ]
+CMD [ "/usr/local/bin/start.sh" ]
 
