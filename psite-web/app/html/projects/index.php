@@ -1,7 +1,7 @@
 <?php
     require_once("../../initialize.php");
 
-    use App\Security\ErrorHandler;
+    use App\Helper\Security\ErrorHandler;
     use App\Db\ProjectDb;
     use App\Model\Project;
     use App\Model\PageType;
@@ -33,11 +33,16 @@
             <div class="col mb-4 d-flex align-items-stretch">
                 <div class="card">
                     <div class="card-body">
-                        <?php if (isset($project->image)) { ?>
-                        <img class="card-img-top"
-                            src="<?php echo "{$project_images_path}/" . htmlspecialchars($project->image); ?>"
-                            alt="<?php echo htmlspecialchars($project->title); ?>">
+                        <?php
+                            $web_image_path = "{$project_images_path}/" . htmlspecialchars($project->image);
+                            $full_image_path = "{$_SERVER['DOCUMENT_ROOT']}{$web_image_path}";
+
+                            if (file_exists($full_image_path)) { ?>
+                                <img class="card-img-top"
+                                    src="<?php echo $web_image_path; ?>"
+                                    alt="<?php echo htmlspecialchars($project->title); ?>">
                         <?php } ?>
+
                         <h5 class="card-title"><?php echo htmlspecialchars($project->title); ?></h5>
                         <p class="card-text"><?php echo htmlspecialchars($project->description); ?></p>
                         <a href="<?php echo htmlspecialchars($project->url); ?>" class="btn btn-primary">Se mere</a>
