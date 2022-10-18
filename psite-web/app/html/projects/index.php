@@ -37,7 +37,7 @@
                             $web_image_path = "{$project_images_path}/" . htmlspecialchars($project->image);
                             $full_image_path = "{$_SERVER['DOCUMENT_ROOT']}{$web_image_path}";
 
-                            if (file_exists($full_image_path)) { ?>
+                            if (isset($project->image) && file_exists($full_image_path)) { ?>
                                 <img class="card-img-top"
                                     src="<?php echo $web_image_path; ?>"
                                     alt="<?php echo htmlspecialchars($project->title); ?>">
