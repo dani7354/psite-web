@@ -8,6 +8,6 @@ class Project
         public readonly string $title,
         public readonly string $url,
         public readonly string $description,
-        public readonly string $image,
+        public readonly ?string $image,
         public readonly bool $is_visible) { }
 }
