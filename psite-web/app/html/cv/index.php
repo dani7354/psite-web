@@ -31,7 +31,7 @@
 
 <div class="container text-left mt-4">
     <div class="row">
-        <div class="col-8">
+        <div class="col-lg-8 text-left">
             <h1>
                 <?php echo $pages[$current_page_id]; ?>
             </h1>
@@ -40,9 +40,9 @@
                     Kort om mig
                 </h3>
                 <p>
-                    Jeg er 25 år gammel og kommer oprindeligt fra Sønderjylland, men bor pt. i Odense, hvor jeg arbejder som 
-                    softwareudvikler. Jeg er uddannet inden for IT og interesserer mig meget for programmering og 
-                    it-sikkerhed. Ved siden af mit arbejde kan jeg godt lide at løbe, læse bøger samt bruge 
+                    Jeg er 25 år gammel og kommer oprindeligt fra Sønderjylland, men bor pt. i Odense, hvor jeg arbejder som
+                    softwareudvikler. Jeg er uddannet inden for IT og interesserer mig meget for programmering og
+                    it-sikkerhed. Ved siden af mit arbejde kan jeg godt lide at løbe, læse bøger samt bruge
                     tid med familie og venner.
                 </p>
             </div>
@@ -53,7 +53,7 @@
             ?>
         </div>
 
-        <div class="col-4 mt-4">
+        <div class="col-sm-4">
             <img class="img-fluid rounded float-right" src="<?php echo IMG_PATH . "/daniel_stuhr.png"; ?>" alt="Daniel Stuhr Petersen" />
             <a href="mailto:d@stuhrs.dk">
                 <img class="img-fluid img-thumbnail" src="<?php echo IMG_PATH . "/envelope-fill.svg"; ?>" height="32" width="32"  alt="Min e-mail" />
