@@ -8,7 +8,7 @@
         const DATE_FORMAT = "Y";
 
         public function __construct(
-            public readonly array $cv_items, 
+            public readonly array $cv_items,
             public readonly string $title) { }
 
         public function getHtml() : string
@@ -36,9 +36,9 @@
             foreach ($this->cv_items as $item)
             {
                 $html .= "<tr>";
-                $html .= "<td class=\"col-2\">" . $item->start->format(self::DATE_FORMAT); 
+                $html .= "<td class=\"col-sm-2\">" . $item->start->format(self::DATE_FORMAT);
                 $html .= " til " . ($item->is_current ? "nu" : $item->end->format(self::DATE_FORMAT)) . "</td>";
-                $html .= "<td class=\"col-9\"><strong>" . htmlspecialchars($item->title) . "</strong>";
+                $html .= "<td class=\"col-md-9\"><strong>" . htmlspecialchars($item->title) . "</strong>";
                 $html .= isset($item->description) ? "<br>" . htmlspecialchars($item->description) : "";
                 $html .= "</td></tr>";
             }
