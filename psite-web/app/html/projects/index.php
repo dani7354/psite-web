@@ -3,7 +3,7 @@
 
     use App\Helper\Security\ErrorHandler;
     use App\Db\ProjectDb;
-    use App\Model\Project;
+    use App\Model\Project\Project;
     use App\Model\PageType;
 
     $current_page_id = PageType::Project->value;
