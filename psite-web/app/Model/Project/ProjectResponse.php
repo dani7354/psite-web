@@ -1,6 +1,6 @@
 <?php
   namespace App\Model\Project;
-  
+
   class ProjectResponse
   {
       public function __construct(

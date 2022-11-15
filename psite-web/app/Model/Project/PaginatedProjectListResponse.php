@@ -10,4 +10,3 @@
         public readonly ?int $next_page_number,
         public readonly ?int $previous_page_number) { }
   }
- ?>
