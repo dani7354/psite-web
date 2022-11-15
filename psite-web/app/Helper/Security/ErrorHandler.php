@@ -7,10 +7,11 @@
             500 => "Internal server error",
             404 => "Not found",
             403 => "Forbidden",
-            401 => "Unauthorized"
+            401 => "Unauthorized",
+            400 => "Bad request"
         ];
 
-        public static function handle_exception($exception, $response_code) 
+        public static function handle_exception($exception, $response_code)
         {
                error_log("Exception: " . $exception->getMessage(), 0); // send to error log
 
