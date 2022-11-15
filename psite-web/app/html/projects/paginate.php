@@ -19,10 +19,9 @@
     if (isset($_GET[PAGE_ITEM_COUNT]))
       $page_item_count = (int) $_GET[PAGE_ITEM_COUNT];
 
-    $is_parameters_valid = $page_number < 1;
-    $is_parameters_valid |= $page_item_count < 1;
+    $is_parameters_valid = $page_number >= 1 && $page_item_count >= 1;
 
-    if ($is_parameters_valid)
+    if (!$is_parameters_valid)
       ErrorHandler::display_error_message("Invalid parameters", 400);
 
     $project_db = new ProjectDb();
