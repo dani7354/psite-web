@@ -17,7 +17,8 @@
             "App\\Db\\": "Db/",
             "App\\Helper\\": "Helper/",
             "App\\Model\\": "Model/",
-            "App\\View\\": "View/"
+            "App\\View\\": "View/",
+            "App\\Mapping\\": "Mapping/"
         }
     }
 }

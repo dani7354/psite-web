@@ -1,27 +1,37 @@
 <?php
+namespace App\Mapping;
 
+use App\Model\Project\Project;
+use App\Model\Project\ProjectResponse;
+use App\Model\Project\PaginatedProjectListResponse;
 
 class ProjectMapper
 {
-  public static function MapList(
+  public static function map_list(
     array $projects,
-    int $project_count) : PaginatedProjectListResponse
+    int $project_count,
+    int $page_number,
+    int $projects_per_page) : PaginatedProjectListResponse
   {
-    var $project_responses = [];
+    $project_responses = [];
 
     foreach ($projects as $project)
     {
-      $project_response = MapItem($project);
-      $project_responses[] = $project_response;
-
+      $project_response = self::map_item($project);
+      array_push($project_responses, $project_response);
     }
 
-    return PaginatedProjectListResponse($project_responses, 0);
+    return new PaginatedProjectListResponse(
+      $project_responses,
+      $project_count,
+      $page_number,
+      $projects_per_page * $page_number < $project_count ? $page_number + 1 : null,
+      $page_number > 1 ? $page_number - 1 : null);
   }
 
-  private static function MapItem(Project $project) : ProjectResponse
+  private static function map_item(Project $project) : ProjectResponse
   {
-    return ProjectResponse(
+    return new ProjectResponse(
       $project->id,
       $project->title,
       $project->url,
