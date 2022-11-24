@@ -35,7 +35,7 @@
       $page_item_count);
 
     header('Content-Type: application/json');
-    print json_encode($paginated_response, JSON_PRETTY_PRINT);
+    print json_encode($paginated_response);
     exit;
   }
   catch (Exception $exception)
