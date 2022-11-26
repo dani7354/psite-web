@@ -8,11 +8,11 @@ use App\Model\Project\PaginatedProjectListResponse;
 class ProjectMapper
 {
   public static function map_list(
-    array $projects,
-    string $image_directory,
-    int $project_count,
-    int $page_number,
-    int $projects_per_page) : PaginatedProjectListResponse
+      array $projects,
+      string $image_directory,
+      int $project_count,
+      int $page_number,
+      int $projects_per_page) : PaginatedProjectListResponse
   {
     $project_responses = [];
 
@@ -31,8 +31,8 @@ class ProjectMapper
   }
 
   private static function map_item(
-    Project $project,
-    string $image_directory) : ProjectResponse
+      Project $project,
+      string $image_directory) : ProjectResponse
   {
     return new ProjectResponse(
       $project->id,

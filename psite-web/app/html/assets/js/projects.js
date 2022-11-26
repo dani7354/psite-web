@@ -2,7 +2,7 @@ const projectContainer = $("#project-container");
 const nextButton = $("#next-button");
 const pageSize = 6;
 
-var nextPage = 1;
+let nextPage = 1;
 
 function insertProjects(projects) {
     $.each(projects, function (index, project) {

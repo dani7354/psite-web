@@ -24,13 +24,13 @@
 
         public static function handle_exception_json($exception, $response_code, $error_message)
         {
-               error_log("Exception: " . $exception->getMessage(), 0); // send to error log
+               error_log("Exception: " . $exception->getMessage(), 0);
 
                $response_message = self::$http_errors[$response_code];
                header('Content-Type: application/json');
                header($_SERVER["SERVER_PROTOCOL"] . " $response_code $response_message");
 
-               $json_data = array( "error_message" => $error_message);
+               $json_data = array("error_message" => $error_message);
                print json_encode($json_data);
 
                exit();
@@ -51,7 +51,7 @@
             header('Content-Type: application/json');
             header($_SERVER["SERVER_PROTOCOL"] . " $response_code $response_message ");
 
-            $json_data = array( "error_message" => $message);
+            $json_data = array("error_message" => $message);
             print json_encode($json_data);
 
             exit();
