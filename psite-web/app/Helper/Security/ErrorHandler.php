@@ -11,7 +11,9 @@
             400 => "Bad request"
         ];
 
-        public static function handle_exception($exception, $response_code)
+        public static function handle_exception(
+            $exception,
+            $response_code)
         {
                error_log("Exception: " . $exception->getMessage(), 0); // send to error log
 
@@ -22,7 +24,10 @@
                exit();
         }
 
-        public static function handle_exception_json($exception, $response_code, $error_message)
+        public static function handle_exception_json(
+            $exception,
+            $response_code,
+            $error_message)
         {
                error_log("Exception: " . $exception->getMessage(), 0);
 
@@ -45,7 +50,9 @@
             exit();
         }
 
-        public static function display_error_message_json($message, $response_code)
+        public static function display_error_message_json(
+            $message,
+            $response_code)
         {
             $response_message = self::$http_errors[$response_code];
             header('Content-Type: application/json');
