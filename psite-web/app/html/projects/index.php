@@ -32,7 +32,7 @@
         <div id="project-container" class="row row-cols-1 row-cols-md-2">
          
         </div>
-        <button id="next-button" type="button" class="btn btn-primary btn-lg btn-block">Vis flere</button>
+        <button id="next-button" type="button" class="btn btn-primary">Vis flere</button>
     </div>
 </div>
 
