@@ -61,11 +61,12 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-lg-12 text-left">
-          <p>
-              Hvis du ønsker at kontakte mig, kan du sende en
-              e-mail, connecte på LinkedIn eller benytte
-              kontaktformularen her på siden.
-          </p>
+            <h1><?php echo $pages[$current_page_id]; ?></h1>
+            <p>
+                Hvis du ønsker at kontakte mig, kan du sende en
+                e-mail, connecte på LinkedIn eller benytte
+                kontaktformularen her på siden.
+            </p>
           <ul>
               <li><a href="mailto:<?php echo EMAIL; ?>">d@stuhrs.dk</a> (<a href="/assets/files/public_key.asc">PGP public key</a>)</li>
               <li><a href="<?php echo LINKEDIN; ?>">daniel-stuhr-petersen</a> på LinkedIn</li>

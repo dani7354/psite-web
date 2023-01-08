@@ -24,7 +24,7 @@
 
 <div class="container mt-4">
     <div class="col text-left">
-        <h1><?php echo $pages[2]; ?></h1>
+        <h1><?php echo $pages[$current_page_id]; ?></h1>
         <p>
             Herunder finder du korte beskrivelser og links til nogle af mine projekter.
         </p>
