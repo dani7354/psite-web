@@ -63,10 +63,14 @@
         <?php echo $pages[$current_page_id]; ?>
     </h1>
     <p>
-        Udfyld kontaktformularen for at sende mig en besked. Du er også velkommen til at sende mig 
-        en <a href="mailto:<?php echo EMAIL; ?>">e-mail</a>. Min offentlige PGP-nøgle finder du 
-        <a href="/assets/files/public_key.asc">her</a>
+        Hvis du ønsker at kontakte mig, kan du sende en
+        e-mail, connecte på LinkedIn eller benytte
+        kontaktformularen her på siden.
     </p>
+    <ul>
+        <li><a href="mailto:<?php echo EMAIL; ?>">d@stuhrs.dk</a> (<a href="/assets/files/public_key.asc">PGP public key</a>)</li>
+        <li><a href="<?php echo LINKEDIN; ?>">daniel-stuhr-petersen</a> på LinkedIn</li>
+    </ul>
 
     <?php if (isset($errors) && !empty($errors)) { ?>
     <span>
