@@ -40,10 +40,10 @@
                     Kort om mig
                 </h3>
                 <p>
-                    Jeg er 25 år gammel og kommer oprindeligt fra Sønderjylland, men bor pt. i Odense, hvor jeg arbejder som
-                    softwareudvikler. Jeg er uddannet inden for IT og interesserer mig meget for programmering og
-                    it-sikkerhed. Ved siden af mit arbejde kan jeg godt lide at løbe, læse bøger samt bruge
-                    tid med familie og venner.
+                    Jeg er 26 år gammel og bor i Odense, hvor jeg arbejder somsoftwareudvikler. Jeg er 
+                    uddannet inden for it og interesserer mig meget for programmering og it-sikkerhed. 
+                    Ved siden af mit arbejde kan jeg godt lide at løbe, læse bøger samt bruge tid med 
+                    familie og venner.
                 </p>
             </div>
 
