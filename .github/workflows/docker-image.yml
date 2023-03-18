@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/psite_web:2.6
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/psite_web:2.7
