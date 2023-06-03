@@ -31,7 +31,7 @@
                 $name_stripped = strip_tags($_POST["name"]);
                 $subject_stripped = strip_tags($_POST["subject"]);
                 $message_body_stripped = strip_tags($_POST["message"]);
-                $remote_ip = isset($_SERVER['HTTP_CF_CONNECTING_IP']) ? $_SERVER["HTTP_CF_CONNECTING_IP"] : $_SERVER["REMOTE_ADDR"];
+                $remote_ip = isset($_SERVER["HTTP_CF_CONNECTING_IP"]) ? $_SERVER["HTTP_CF_CONNECTING_IP"] : $_SERVER["REMOTE_ADDR"];
 
                 $new_message = new Message(
                     $name_stripped,
