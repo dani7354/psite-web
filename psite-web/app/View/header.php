@@ -23,7 +23,6 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link <?php if ($current_page_id === PageType::Home->value){ echo "active"; }?>" href="/"><?php echo $pages[PageType::Home->value]; ?> </a>
-                <a class="nav-item nav-link <?php if ($current_page_id === PageType::Cv->value){ echo "active"; }?>" href="/cv"><?php echo $pages[PageType::Cv->value]; ?></a>
                 <a class="nav-item nav-link <?php if ($current_page_id === PageType::Project->value){ echo "active"; }?>" href="/projects"><?php echo $pages[PageType::Project->value]; ?></a>
                 <a class="nav-item nav-link <?php if ($current_page_id === PageType::Contact->value){ echo "active"; }?>" href="/contact"><?php echo $pages[PageType::Contact->value]; ?></a>
             </div>

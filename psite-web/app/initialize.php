@@ -27,7 +27,6 @@
     # Page titles
     $pages = [
         PageType::Home->value => "Forside",
-        PageType::Cv->value => "CV",
         PageType::Project->value => "Projekter",
         PageType::Contact->value => "Kontakt"
     ];
