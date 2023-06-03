@@ -10,18 +10,20 @@ RUN apt update && apt install -y \
 
 # Install PHP-FPM and modules
 ARG debian_release
+ARG php_version=8.2
+
 RUN wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add -
 RUN echo "deb https://packages.sury.org/php/ ${debian_release} main" | tee /etc/apt/sources.list.d/php.list
 RUN apt update && apt install -y \ 
     libapache2-mod-fcgid \
-    php8.1 \
-    php8.1-cli \
-    php8.1-cgi \
-    php8.1-common \
-    php8.1-fpm \
-    php8.1-gd \
-    php8.1-mbstring \
-    php8.1-mysql
+    php${php_version} \
+    php${php_version}-cli \
+    php${php_version}-cgi \
+    php${php_version}-common \
+    php${php_version}-fpm \
+    php${php_version}-gd \
+    php${php_version}-mbstring \
+    php${php_version}-mysql
 
 # Add website files
 ARG wwwroot=/var/www
@@ -29,8 +31,6 @@ ARG composer_installer_hash=55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0
 
 RUN rm -R ${wwwroot}/html/
 COPY ./psite-web/app $wwwroot
-RUN mkdir ${wwwroot}/html/goaccess
-RUN mkdir ${wwwroot}/htpasswd
 
 # Download and  install composer
 WORKDIR /tmp
@@ -52,9 +52,9 @@ COPY ./psite-web/apache/conf-available/ssl-parameters.conf /etc/apache2/conf-ava
 COPY ./psite-web/apache/mods-available/fcgid.conf /etc/apache2/mods-available/fcgi.conf
 
 # Copy PHP and PHP-FPM configs
-COPY ./psite-web/php/php.ini-production /etc/php/8.1/fpm/php.ini
-COPY ./psite-web/php/fpm/php-fpm.conf /etc/php/8.1/fpm/php-fpm.conf
-COPY ./psite-web/php/fpm/pool.d/www.conf /etc/php/8.1/fpm/pool.d/www.conf
+COPY ./psite-web/php/php.ini-production /etc/php/${php_version}/fpm/php.ini
+COPY ./psite-web/php/fpm/php-fpm.conf /etc/php/${php_version}/fpm/php-fpm.conf
+COPY ./psite-web/php/fpm/pool.d/www.conf /etc/php/${php_version}/fpm/pool.d/www.conf
 
 # Create a new private key and self-signed X.509 certificate.
 # FOR LOCAL TESTING ONLY! Mount the correct certificate location as volume in .yaml file  
@@ -88,7 +88,7 @@ RUN a2enmod \
 RUN a2enconf \
     security \
     ssl-parameters \
-    php8.1-fpm
+    php${php_version}-fpm
 
 RUN a2ensite default-ssl
 
