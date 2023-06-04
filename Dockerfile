@@ -4,7 +4,7 @@ FROM debian:${debian_release}
 
 # Install required packages
 RUN apt update && apt install -y \
-    wget \ 
+    wget \
     gnupg2 \
     apache2
 
@@ -14,7 +14,7 @@ ARG php_version=8.2
 
 RUN wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add -
 RUN echo "deb https://packages.sury.org/php/ ${debian_release} main" | tee /etc/apt/sources.list.d/php.list
-RUN apt update && apt install -y \ 
+RUN apt update && apt install -y \
     libapache2-mod-fcgid \
     php${php_version} \
     php${php_version}-cli \
@@ -56,24 +56,13 @@ COPY ./psite-web/php/php.ini-production /etc/php/${php_version}/fpm/php.ini
 COPY ./psite-web/php/fpm/php-fpm.conf /etc/php/${php_version}/fpm/php-fpm.conf
 COPY ./psite-web/php/fpm/pool.d/www.conf /etc/php/${php_version}/fpm/pool.d/www.conf
 
-# Create a new private key and self-signed X.509 certificate.
-# FOR LOCAL TESTING ONLY! Mount the correct certificate location as volume in .yaml file  
-ARG ssl_dir=/etc/apache2/ssl
-RUN mkdir $ssl_dir
-RUN openssl req -x509 -nodes \
-    -days 365 \
-    -newkey rsa:4096 \
-    -keyout ${ssl_dir}/server.key \
-    -subj "/C=DK/ST=Denmark/O=Test/CN=www.stuhrs.dk" \
-    -out ${ssl_dir}/server.crt
-
-RUN chmod 400 ${ssl_dir}/server.key
-RUN chmod 444 ${ssl_dir}/server.crt
+# Mount the correct certificate location as volume in .yaml file
+RUN mkdir /etc/apache2/ssl
 
 # Enable/disable apache2 mods, configs and sites
 RUN a2dismod mpm_prefork
 
-RUN a2enmod \ 
+RUN a2enmod \
     rewrite \
     ssl \
     headers \
@@ -94,7 +83,6 @@ RUN a2ensite default-ssl
 
 # chown wwwroot + apache restart
 RUN chown -R www-data:www-data $wwwroot
-RUN service apache2 restart
 
 # Copy start script
 COPY ./psite-web/docker/start.sh /usr/local/bin/start.sh
@@ -104,4 +92,3 @@ EXPOSE 80
 EXPOSE 443
 
 CMD [ "/usr/local/bin/start.sh" ]
-
