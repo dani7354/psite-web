@@ -47,8 +47,11 @@ RUN composer install
 COPY ./psite-web/apache/apache2.conf /etc/apache2/apache2.conf
 COPY ./psite-web/apache/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY ./psite-web/apache/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
+
 COPY ./psite-web/apache/conf-available/security.conf /etc/apache2/conf-available/security.conf
 COPY ./psite-web/apache/conf-available/ssl-parameters.conf /etc/apache2/conf-available/ssl-parameters.conf
+COPY ./psite-web/apache/conf-available/remoteip.conf /etc/apache2/conf-available/remoteip.conf
+
 COPY ./psite-web/apache/mods-available/fcgid.conf /etc/apache2/mods-available/fcgi.conf
 
 # Copy PHP and PHP-FPM configs
@@ -72,12 +75,14 @@ RUN a2enmod \
     proxy \
     proxy_fcgi \
     http2 \
-    mpm_event
+    mpm_event \
+    remoteip
 
 RUN a2enconf \
     security \
     ssl-parameters \
-    php${php_version}-fpm
+    php${php_version}-fpm \
+    remoteip
 
 RUN a2ensite default-ssl
 
