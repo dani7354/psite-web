@@ -22,7 +22,6 @@
     const DOMAIN = "www.stuhrs.dk";
     const FULL_NAME = "Daniel Stuhr Petersen";
     const EMAIL = "d@stuhrs.dk";
-    const LINKEDIN = "//www.linkedin.com/in/daniel-stuhr-petersen/";
 
     # Page titles
     $pages = [
