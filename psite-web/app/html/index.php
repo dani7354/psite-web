@@ -18,7 +18,7 @@
                 Velkommen til min hjemmeside!
             </p>
             <p>
-                Mit navn er Daniel. Jeg er 26 år gammel, bor i Odense og arbejder til dagligt som programmør.
+                Mit navn er Daniel. Jeg er 26 år gammel, bor i København og arbejder med it.
             </p>
             <p>
                 Hjemmesiden blev oprettet i forbindelse med et projekt på datamatikerstudiet tilbage i 2019. Dengang fungerede den som en blog og portfolio, som jeg brugte til at dokumentere mit projektarbejde. Den har derefter været nede ad flere omgange, men i 2021 satte jeg mig for at renovere den en smule og lægge den online igen. Nu forsøger jeg at holde oplysningerne på siden opdaterede og at tilføje lidt nyt indhold, når jeg en gang imellem har tid. :-)
