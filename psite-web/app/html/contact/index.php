@@ -58,7 +58,7 @@
     $captcha_image = CaptchaHelper::get_image();
 ?>
 
-<?php include(HTML_ELEMENTS_PATH . "/header.php"); ?>
+<?php include_once(HTML_ELEMENTS_PATH . "/header.php"); ?>
 
 <div class="container mt-4">
     <div class="row">
@@ -136,4 +136,4 @@
     </div>
 </div>
 
-<?php include(HTML_ELEMENTS_PATH . "/footer.php"); ?>
+<?php include_once(HTML_ELEMENTS_PATH . "/footer.php"); ?>

@@ -6,11 +6,11 @@
     $current_page_id = PageType::Home->value;
 ?>
 
-<?php include(HTML_ELEMENTS_PATH . "/header.php"); ?>
+<?php include_once(HTML_ELEMENTS_PATH . "/header.php"); ?>
 
-<div class="container">
+<div class="container mt-4">
     <div class="row">
-        <div class="col-md text-left mt-4">
+        <div class="col-md text-left">
             <h1>
                 <?php echo $pages[$current_page_id]; ?>
             </h1>
@@ -30,4 +30,4 @@
     </div>
 </div>
 
-<?php include(HTML_ELEMENTS_PATH . "/footer.php"); ?>
+<?php include_once(HTML_ELEMENTS_PATH . "/footer.php"); ?>
