@@ -16,7 +16,9 @@ function insertProject(project) {
     html += `<div class="card">`;
     html += `<div class="card-body d-flex flex-column">`;
     if (project.image !== null) {
+        html += `<a href="${project.url}">`;
         html += `<img class="card-img-top" src="${project.image}" alt="${project.title}">`;
+        html += `</a>`;
     }
     html += `<h5 class="card-title">${project.title}</h5>`;
     html += `<p class="card-text">${project.description}</p>`;
