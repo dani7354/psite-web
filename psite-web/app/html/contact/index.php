@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once("../../initialize.php");
+    require_once "../../initialize.php";
 
     use App\Helper\Security\CsrfHelper;
     use App\Helper\Security\CaptchaHelper;
@@ -58,7 +58,7 @@
     $captcha_image = CaptchaHelper::get_image();
 ?>
 
-<?php include_once(HTML_ELEMENTS_PATH . "/header.php"); ?>
+<?php include_once HTML_ELEMENTS_PATH . "/header.php"; ?>
 
 <div class="container mt-4">
     <div class="row">
@@ -136,4 +136,4 @@
     </div>
 </div>
 
-<?php include_once(HTML_ELEMENTS_PATH . "/footer.php"); ?>
+<?php include_once HTML_ELEMENTS_PATH . "/footer.php"; ?>
