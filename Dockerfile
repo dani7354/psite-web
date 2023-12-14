@@ -6,11 +6,12 @@ FROM debian:${debian_release}
 RUN apt update && apt install -y \
     wget \
     gnupg2 \
-    apache2
+    apache2 \
+    && apt clean
 
 # Install PHP-FPM and modules
 ARG debian_release
-ARG php_version=8.2
+ARG php_version=8.3
 
 RUN wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add -
 RUN echo "deb https://packages.sury.org/php/ ${debian_release} main" | tee /etc/apt/sources.list.d/php.list
@@ -23,7 +24,8 @@ RUN apt update && apt install -y \
     php${php_version}-fpm \
     php${php_version}-gd \
     php${php_version}-mbstring \
-    php${php_version}-mysql
+    php${php_version}-mysql \
+    && apt clean
 
 # Add website files
 ARG wwwroot=/var/www
@@ -61,6 +63,7 @@ COPY ./psite-web/php/fpm/pool.d/www.conf /etc/php/${php_version}/fpm/pool.d/www.
 
 # Mount the correct certificate location as volume in .yaml file
 RUN mkdir /etc/apache2/ssl
+RUN mkdir /var/log/php-fpm
 
 # Enable/disable apache2 mods, configs and sites
 RUN a2dismod mpm_prefork
@@ -87,7 +90,7 @@ RUN a2enconf \
 RUN a2ensite default-ssl
 
 # chown wwwroot + apache restart
-RUN chown -R www-data:www-data $wwwroot
+RUN chown -R www-data:www-data "$wwwroot"
 
 # Copy start script
 COPY ./psite-web/docker/start.sh /usr/local/bin/start.sh

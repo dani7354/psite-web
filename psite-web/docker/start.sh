@@ -2,7 +2,7 @@
 # Start Apache and PHP-FPM inside the container
 
 # Start PHP-FPM
-/etc/init.d/php8.2-fpm start &
+/etc/init.d/php8.3-fpm start &
   
 # Start apachectl
 /usr/sbin/apachectl -D FOREGROUND
