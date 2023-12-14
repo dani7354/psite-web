@@ -63,6 +63,7 @@ COPY ./psite-web/php/fpm/pool.d/www.conf /etc/php/${php_version}/fpm/pool.d/www.
 
 # Mount the correct certificate location as volume in .yaml file
 RUN mkdir /etc/apache2/ssl
+RUN mkdir /var/log/php-fpm
 
 # Enable/disable apache2 mods, configs and sites
 RUN a2dismod mpm_prefork
