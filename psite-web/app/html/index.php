@@ -23,6 +23,7 @@
        
         </div>
         <div class="col-sm mt-4 float-right card bg-light mb-3">
+            <!-- TODO: replace projects -->
             <h3>Seneste projekter</h3>
             <ul>
                 <li><a href="#">book-prices (2023-12-25)</a></li>
