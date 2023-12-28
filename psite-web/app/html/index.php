@@ -20,12 +20,16 @@
             <p>
                 Mit navn er Daniel. Jeg er 26 år gammel, bor i København og arbejder med it.
             </p>
-            <p>
-                Hjemmesiden blev oprettet i forbindelse med et projekt på datamatikerstudiet tilbage i 2019. Dengang fungerede den som en blog og portfolio, som jeg brugte til at dokumentere mit projektarbejde. Den har derefter været nede ad flere omgange, men i 2021 satte jeg mig for at renovere den en smule og lægge den online igen. Nu forsøger jeg at holde oplysningerne på siden opdaterede og at tilføje lidt nyt indhold, når jeg en gang imellem har tid. :-)
-            </p>
+       
         </div>
-        <div class="col-sm mt-4">
-            <img class="img-fluid rounded float-right" src="<?php echo IMG_PATH . "/code.jpg"; ?>" alt="bare lidt Python" />
+        <div class="col-sm mt-4 float-right card bg-light mb-3">
+            <h3>Seneste projekter</h3>
+            <ul>
+                <li><a href="#">book-prices (2023-12-25)</a></li>
+                <li><a href="#">ssh-hosts (2023-12-10)</a></li>
+                <li><a href="#">samba-fucker (2023-12-09)</a></li>
+                <li><a href="#">hash-cracker (2023-12-01)</a></li>
+            </ul>
         </div>
     </div>
 </div>

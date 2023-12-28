@@ -32,8 +32,9 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link <?php if ($current_page_id === PageType::Home->value){ echo "active"; }?>" href="/"><?php echo $pages[PageType::Home->value]; ?> </a>
                 <a class="nav-item nav-link <?php if ($current_page_id === PageType::Project->value){ echo "active"; }?>" href="/projects"><?php echo $pages[PageType::Project->value]; ?></a>
+                <a class="nav-item nav-link <?php if ($current_page_id === PageType::About->value){ echo "active"; }?>" href="/about"><?php echo $pages[PageType::About->value]; ?></a>
                 <a class="nav-item nav-link <?php if ($current_page_id === PageType::Contact->value){ echo "active"; }?>" href="/contact"><?php echo $pages[PageType::Contact->value]; ?></a>
-            </div>
+              </div>
           </div>
         </nav>
       </header>
