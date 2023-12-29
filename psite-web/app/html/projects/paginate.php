@@ -1,5 +1,5 @@
 <?php
-  require_once("../../initialize.php");
+  require_once "../../initialize.php";
 
   use App\Db\ProjectDb;
   use App\Mapping\ProjectMapper;

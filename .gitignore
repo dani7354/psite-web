@@ -2,6 +2,7 @@
 *.swp
 *.phar
 *.lock
+TODO.txt
 
 .idea/
 .vscode/

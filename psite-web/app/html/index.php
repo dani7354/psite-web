@@ -18,14 +18,18 @@
                 Velkommen til min hjemmeside!
             </p>
             <p>
-                Mit navn er Daniel. Jeg er 26 år gammel, bor i København og arbejder med it.
+                Dette er min personlige side, hvor du kan følge med i, hvad jeg går og laver.
+                Eftersom jeg arbejder med it og programmering, handler siden mest om softwareprojekter. 
+                Du finder desuden mine <a href="/contact">kontaktinformationer</a> og mit <a href="/about">cv</a>. 
             </p>
-            <p>
-                Hjemmesiden blev oprettet i forbindelse med et projekt på datamatikerstudiet tilbage i 2019. Dengang fungerede den som en blog og portfolio, som jeg brugte til at dokumentere mit projektarbejde. Den har derefter været nede ad flere omgange, men i 2021 satte jeg mig for at renovere den en smule og lægge den online igen. Nu forsøger jeg at holde oplysningerne på siden opdaterede og at tilføje lidt nyt indhold, når jeg en gang imellem har tid. :-)
-            </p>
+       
         </div>
-        <div class="col-sm mt-4">
-            <img class="img-fluid rounded float-right" src="<?php echo IMG_PATH . "/code.jpg"; ?>" alt="bare lidt Python" />
+        <div class="col-sm mt-4 float-right card bg-light mb-3">
+            <!-- TODO: replace projects -->
+            <h3>Seneste projekter (under ombygning)</h3>
+            <ul>
+                <li><a href="#">projekt-1 (2023-12-25)</a></li>
+            </ul>
         </div>
     </div>
 </div>

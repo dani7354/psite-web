@@ -27,7 +27,8 @@
     $pages = [
         PageType::Home->value => "Forside",
         PageType::Project->value => "Projekter",
-        PageType::Contact->value => "Kontakt"
+        PageType::Contact->value => "Kontakt",
+        PageType::About->value => "Om"
     ];
 
     # Database information
