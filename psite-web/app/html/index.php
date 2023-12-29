@@ -18,18 +18,17 @@
                 Velkommen til min hjemmeside!
             </p>
             <p>
-                Mit navn er Daniel. Jeg er 26 år gammel, bor i København og arbejder med it.
+                Dette er min personlige side, hvor du kan følge med i, hvad jeg går og laver.
+                Eftersom jeg arbejder med it og programmering, handler siden mest om softwareprojekter. 
+                Du finder desuden mine <a href="/contact">kontaktinformationer</a> og mit <a href="/about">cv</a>. 
             </p>
        
         </div>
         <div class="col-sm mt-4 float-right card bg-light mb-3">
             <!-- TODO: replace projects -->
-            <h3>Seneste projekter</h3>
+            <h3>Seneste projekter (under ombygning)</h3>
             <ul>
-                <li><a href="#">book-prices (2023-12-25)</a></li>
-                <li><a href="#">ssh-hosts (2023-12-10)</a></li>
-                <li><a href="#">samba-fucker (2023-12-09)</a></li>
-                <li><a href="#">hash-cracker (2023-12-01)</a></li>
+                <li><a href="#">projekt-1 (2023-12-25)</a></li>
             </ul>
         </div>
     </div>

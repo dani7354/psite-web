@@ -2,14 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://www.stuhrs.dk/</loc>
-		<lastmod>2023-03-18T00:00:00+01:00</lastmod>
+		<lastmod>2023-12-29T00:00:00+01:00</lastmod>
 	</url>
     <url>
 		<loc>https://www.stuhrs.dk/projects/</loc>
-		<lastmod>2023-03-18T00:00:00+01:00</lastmod>
+		<lastmod>2023-12-29T00:00:00+01:00</lastmod>
 	</url>
-     <url>
+	 <url>
+		<loc>https://www.stuhrs.dk/about/</loc>
+		<lastmod>2023-12-29T00:00:00+01:00</lastmod>
+	</url>
+    <url>
 		<loc>https://www.stuhrs.dk/contact/</loc>
-		<lastmod>2023-03-18T00:00:00+01:00</lastmod>
+		<lastmod>2023-12-29T00:00:00+01:00</lastmod>
 	</url>
 </urlset>

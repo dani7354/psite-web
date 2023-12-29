@@ -12,7 +12,7 @@
         <?php echo $pages[$current_page_id]; ?>
     </h1>
     <div class="row">
-        <div class="col-md text-left">
+        <div class="col-sm-8 text-left">
            
             <p>
                 <strong>Daniel Stuhr Petersen</strong>
@@ -27,12 +27,12 @@
                 Mine interesser ligger inden for softwareudvikling og it-sikkerhed, især web- og systemsikkerhed. 
                 For eksempel kan jeg godt lide at udvikle applikationer og systemer for dernæst at skanne og teste 
                 dem for sårbarheder. Til dette benytter jeg værktøjer såsom Nmap og Burp Suite. Jeg holder også meget
-                af at automatisere repetitivt arbejde som håndtering af backups, opdatering og installation af software,
+                af at automatisere repetitive opgaver som håndtering af backups, opdatering og installation af software,
                 samt læsning af logfiler. Her er Python et af mine foretrukne programmeringssprog.  
             </p>
             <p>
-                Når jeg ikke nørder den foran min computer, kan jeg godt lide at løbe en tur i skoven, læse en god bog,
-                se film og serier og bruge tid sammen med venner og familie. 
+                Når jeg ikke sidder foran computeren, hvilket jeg naturligvis ikke altid gør, kan jeg godt lide at løbe en tur i skoven, læse en god bog
+                og bruge tid sammen med venner og familie. 
             </p>
             <p>
                 <strong>Uddannelse</strong> 
@@ -50,7 +50,7 @@
                 <br>
                 Studenterprogrammør, ABB A/S, 2020-2021
         </div>
-        <div class="col-sm">
+        <div class="col-sm-4">
             <img class="img-fluid rounded float-right" src="/assets/img/daniel_stuhr_petersen.png" alt="Daniel Stuhr Petersen">
         </div>
     </div>
