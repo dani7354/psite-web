@@ -35,7 +35,7 @@
                 se film og serier og bruge tid sammen med venner og familie. 
             </p>
             <p>
-                <strong>Udannelse</strong> 
+                <strong>Uddannelse</strong> 
                 <br>
                 Professionsbachelor i it-sikkerhed, Københavns Erhvervsakademi, 2020-2021
                 <br>
