@@ -18,16 +18,16 @@
                 <strong>Daniel Stuhr Petersen</strong>
                 <br>
                 Jeg er en mand på 26 år, der bor i København og arbejder med it. I 2017 flyttede jeg til Fyn for at læse datamatiker på UCL
-                og senere it-sikkerhed på KEA, mens jeg arbejdede som softwareudvikler hos ABB A/S, hvor jeg arbejdede med 
+                og senere it-sikkerhed på KEA, mens jeg arbejdede som softwareudvikler hos ABB A/S, hvor jeg primært brugte 
                 Microsoft-teknologier som .NET og MS SQL. Da jeg blev færdiguddannet i 2021, fik jeg job som .NET-udvikler hos Hesehus A/S 
                 i Odense. Her udviklede jeg webshops for forskellige kunder i lige knap to år, hvorefter jeg flyttede til København for at 
                 arbejde med it i Forsvaret.
             </p>   
             <p>
                 Mine interesser ligger inden for softwareudvikling og it-sikkerhed, især web- og systemsikkerhed. 
-                For eksempel kan jeg godt lide at udvikle applikationer og systemer for dernæst at skanne og teste 
+                For eksempel kan jeg godt lide at udvikle applikationer og systemer for dernæst at scanne og teste 
                 dem for sårbarheder. Til dette benytter jeg værktøjer såsom Nmap og Burp Suite. Jeg holder også meget
-                af at automatisere repetitive opgaver som håndtering af backups, opdatering og installation af software,
+                af at automatisere repetitive opgaver som håndtering af backups, opdatering og installation af software
                 samt læsning af logfiler. Her er Python et af mine foretrukne programmeringssprog.  
             </p>
             <p>
