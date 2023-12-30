@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
-Canonical: https://www.stuhrs.dk/.well-known/security.txt
+Canonical: https://stuhrs.dk/.well-known/security.txt
 Contact: mailto:d@stuhrs.dk
-Encryption: https://www.stuhrs.dk/assets/files/public_key.asc
+Encryption: https://stuhrs.dk/assets/files/public_key.asc
 Preferred-Languages: en, fr, da
-Expires: 2023-12-31T10:00:00z
+Expires: 2024-12-31T10:00:00z
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCAAdFiEEmsoACsEdUdKuDgLAj675Wo/MoEkFAmO8/C8ACgkQj675Wo/M
-oEmRDxAAi4IN+KzyhM+zmLcaNpjIEEzGUiFnPUbIUYRFLwheFYIWSbLlmAHihUKv
-gnj/8mUQBcMc76n5RU9DwblurmA+mh8QbtGbeKaWiP9cHjv6xY3BZNr4ZWUZw/Bs
-G13vMuVAyWesy7JsrcxZ7HStptZSjTDobo18o3Mg1o/18Mr24fvWEmK8TlGnP7je
-j4aQadWSkxjZSzujD4m+JMii/QXAyJ5rwcBaugDSNitkVtFRTxfMYuyZxqopDxrx
-Fjt0EgDU5wVyLefhUGeRJ4MM3E5YCpL/YTWX95WpzyTH6LSXxxN3EyZWmQhr2RkR
-ttf1hC3GS/brGFoijtom+XtRznEiD69GEh1d10mCr8Off8Nsih6SLlH4u6Ajq89a
-gpCA6Y5XWs1uBy+lHPgiLModKHgq4Nx7wdppYb/dXQOZrbRoQVTC5qskKQIY+wu3
-f7xivzzflVDpGs5XRPh9tcdI5nX5xOFAOqqjh0Q1K/2AxF5b09yYy+tOlCB2Iy7Q
-SPxhEF8F4NBxTVYWSYsVQj9aGlkxPVkFn6z+G9MdmAwmorfV4HGLk7NYhRJ3oAID
-25g94qYDwQg9x9+sz77km1zGLad+Brfw0yFQZWunMs08VZs8+r2ZNrYlA0apF1Z3
-Vgf692xVEDxr1tW8xLV0DuaA6rNkd9QIpULQYVB67vfdNFDrINA=
-=T/QW
+iQIzBAEBCAAdFiEEmsoACsEdUdKuDgLAj675Wo/MoEkFAmWPuzYACgkQj675Wo/M
+oEkjZw//cBMcu9blO1jkKdaLifzb2JamTMUpErdIFhCpUfiAlOAHvtDX7XmbnK0E
+uBT7XE+TT4jc9EzFbOhWNwOHHvpceTSy1uSPI6ti7L9ksvz4/Jt0yt/FwZhdcRG6
+4zK9Fe2sEuvQO06wHpMw4TN0Sr7JPW1UXFcGSL+PzXeASd6V4al1WpLnzEe7d7Nd
+NPOv/YUpPYMb05KKoV77tIGM87jwzm9N+BnbSx3PeYoJ+mx7+onkzrlWDr+ylbp5
+nXYXWVzDH6ENiYjG2E+w8WmfLwvOCx9nJEIMHY4S6lbpojpuWj6eCjCaaxVzdRbk
+B8y39bYFz7V/qPyQodPVlEQjnSdmjjo0i0hZi/PoaGjPs7PLdUBgaGJlFAKPYsGT
+OKv1lBOoZ1WLffJQkzlrEJw2/p8uIIO0zM4PjPbKXRpRkDMwGV9zNH4Rz26AhCvp
+MZfzadYSMqJFaIRN78yOm1idYFikexcasyF4wrstLA9+oYWMF3EaFTy+Mno1ZMtB
+1WO+lzUHMoaTMtnADaQTzLw22yEt8ypxTXFdnhoA2duN0VJlAORkQuswLuHduYvO
+u0qM0FkFfH1B1zIzq5vvepwaq4m6RuPbIA2epx/R0uLgsgFe6F3Gh71pQlivQjCS
+Aj4giDnbVXiTN8HcSqu9tnGRV2KVzaH5A18l+Szn1xfcnDDi1to=
+=F29d
 -----END PGP SIGNATURE-----
