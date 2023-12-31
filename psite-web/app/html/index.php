@@ -2,8 +2,13 @@
     require_once "../initialize.php";
 
     use App\Model\PageType;
+    use App\Model\Project\Project;
+    use App\Db\ProjectDb;
 
     $current_page_id = PageType::Home->value;
+
+    $project_db = new ProjectDb();
+    $latest_updated_projects = $project_db->get_last_updated_projects(5);
 ?>
 
 <?php include_once HTML_ELEMENTS_PATH . "/header.php"; ?>
@@ -26,9 +31,16 @@
         </div>
         <div class="col-sm mt-4 float-right card bg-light mb-3">
             <!-- TODO: replace projects -->
-            <h3>Seneste projekter (under ombygning)</h3>
+            <h3>Seneste arbejde</h3>
             <ul>
-                <li><a href="#">projekt-1 (2023-12-25)</a></li>
+            <?php foreach($latest_updated_projects as $project) { ?>
+                <?php
+                    $title = htmlspecialchars($project->title);
+                    $updated_at = htmlspecialchars($project->updated_at);
+                    $url = htmlspecialchars($project->url); 
+                ?> 
+                <li><?php echo "$title ($updated_at) - "; ?><a href="<?php echo $url; ?>">GitHub</a></li>
+            <?php } ?>
             </ul>
         </div>
     </div>

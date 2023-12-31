@@ -9,5 +9,7 @@ class Project
         public readonly string $url,
         public readonly string $description,
         public readonly ?string $image,
-        public readonly bool $is_visible) { }
+        public readonly ?string $updated_at,
+        public readonly bool $is_visible,
+        ) { }
 }

@@ -22,6 +22,9 @@ function insertProject(project) {
     }
     html += `<h5 class="card-title">${project.title}</h5>`;
     html += `<p class="card-text">${project.description}</p>`;
+    if (project.updated_at !== null) {
+        html += `<p class="card-text">Senest opdateret: ${project.updated_at}</p>`;
+    }
     html += `<a href="${project.url}" class="btn btn-secondary mt-auto">Gå til kildekode</a>`;
     html += `</div>`;
     html += `</div>`;
