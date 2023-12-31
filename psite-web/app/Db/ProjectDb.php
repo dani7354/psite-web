@@ -17,10 +17,13 @@
         public function all() : array
         {
             $connection = $this->db_connector->get_connection();
-            $query = $connection->query("SELECT Id, Title, Url, Description, Image, IsVisible
-            FROM Project
-            WHERE IsVisible = 1
-            ORDER BY OrderNumber");
+            $query = $connection->query("
+            SELECT p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
+            FROM Project p
+            LEFT OUTER JOIN ProjectUpdate pu ON p.Id = pu.ProjectId
+            WHERE p.IsVisible = 1
+            GROUP BY p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible
+            ORDER BY p.OrderNumber");
 
             $projects = [];
 
@@ -32,6 +35,7 @@
                     $row["Url"],
                     $row["Description"],
                     $row["Image"],
+                    $row["UpdatedAt"],
                     $row["IsVisible"]);
 
                 array_push($projects, $project);
@@ -45,10 +49,13 @@
         public function get_page(int $page_number, int $limit) : array
         {
             $connection = $this->db_connector->get_connection();
-            $query = $connection->prepare("SELECT Id, Title, Url, Description, Image, IsVisible
-            FROM Project
-            WHERE IsVisible = 1
-            ORDER BY OrderNumber LIMIT ? OFFSET ?");
+            $query = $connection->prepare("
+            SELECT p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
+            FROM Project p
+            LEFT OUTER JOIN ProjectUpdate pu ON p.Id = pu.ProjectId
+            WHERE p.IsVisible = 1
+            GROUP BY p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible
+            ORDER BY p.OrderNumber LIMIT ? OFFSET ?");
 
             $offset = ($page_number - 1) * $limit;
 
@@ -66,6 +73,7 @@
                     $row["Url"],
                     $row["Description"],
                     $row["Image"],
+                    $row["UpdatedAt"],
                     $row["IsVisible"]);
 
                 array_push($projects, $project);
@@ -91,5 +99,39 @@
             $this->db_connector->close_connection($connection);
 
             return $project_count;
+        }
+
+        public function get_last_updated_projects(int $count) : array
+        {
+            $connection = $this->db_connector->get_connection();
+            $query = $connection->prepare("
+            SELECT p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
+            FROM Project p
+            LEFT OUTER JOIN ProjectUpdate pu ON p.Id = pu.ProjectId
+            WHERE p.IsVisible = 1 AND pu.UpdatedAt IS NOT NULL
+            GROUP BY p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible
+            ORDER BY UpdatedAt DESC
+            LIMIT ?");
+
+            $query->bindParam(1, $count, PDO::PARAM_INT);
+            $query->execute();
+
+            $projects = [];
+
+            while($row = $query->fetch())
+            {
+                $project = new Project(
+                    $row["Id"],
+                    $row["Title"],
+                    $row["Url"],
+                    $row["Description"],
+                    $row["Image"],
+                    $row["UpdatedAt"],
+                    $row["IsVisible"]);
+
+                array_push($projects, $project);
+            }
+
+            return $projects;
         }
     }

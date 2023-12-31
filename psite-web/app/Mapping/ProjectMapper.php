@@ -39,6 +39,7 @@ class ProjectMapper
       htmlspecialchars($project->title),
       htmlspecialchars($project->url),
       htmlspecialchars($project->description),
-      isset($project->image) ? $image_directory . htmlspecialchars($project->image) : null);
+      isset($project->image) ? $image_directory . htmlspecialchars($project->image) : null,
+      isset($project->updated_at) ? htmlspecialchars($project->updated_at) : null);
   }
 }
