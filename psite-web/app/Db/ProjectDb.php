@@ -17,7 +17,8 @@
         public function all() : array
         {
             $connection = $this->db_connector->get_connection();
-            $query = $connection->query("SELECT p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
+            $query = $connection->query("
+            SELECT p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
             FROM Project p
             LEFT OUTER JOIN ProjectUpdate pu ON p.Id = pu.ProjectId
             WHERE p.IsVisible = 1
@@ -48,7 +49,8 @@
         public function get_page(int $page_number, int $limit) : array
         {
             $connection = $this->db_connector->get_connection();
-            $query = $connection->prepare("SELECT p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
+            $query = $connection->prepare("
+            SELECT p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
             FROM Project p 
             LEFT OUTER JOIN ProjectUpdate pu ON p.Id = pu.ProjectId
             WHERE p.IsVisible = 1
@@ -102,7 +104,8 @@
         public function get_last_updated_projects(int $count) : array
         {
             $connection = $this->db_connector->get_connection();
-            $query = $connection->prepare("SELECT p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
+            $query = $connection->prepare("
+            SELECT p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
             FROM Project p 
             LEFT OUTER JOIN ProjectUpdate pu ON p.Id = pu.ProjectId
             WHERE p.IsVisible = 1 AND pu.UpdatedAt IS NOT NULL

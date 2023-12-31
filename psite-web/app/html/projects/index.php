@@ -35,9 +35,9 @@
             </p>
             <div id="project-container" class="row row-cols-1 row-cols-md-2"></div>
             <button id="next-button" type="button" class="btn btn-primary">Vis flere</button>
-            <script src="<?php echo JS_PATH . "/projects.js"; ?>" 
-            integrity="sha256-xOzdO/8gDtKM8uHqFnHM2d9STxY9iH1tm/VMs6R2+Eg= 
-            sha384-6gcuipvccuUFcfYkIjvAJZ0UFifjNk4i++X4PpAw7TeeSjDVnC/B0MH7sfekfR8M 
+            <script src="<?php echo JS_PATH . "/projects.js"; ?>"
+            integrity="sha256-xOzdO/8gDtKM8uHqFnHM2d9STxY9iH1tm/VMs6R2+Eg=
+            sha384-6gcuipvccuUFcfYkIjvAJZ0UFifjNk4i++X4PpAw7TeeSjDVnC/B0MH7sfekfR8M
             sha512-9fo2r1Cc0f4aPCqAXo+6rnoztZhQiy/d1tfDEC0atuHd2Itq1fyO2AhJrC8iGMDpzqna6wPjPoxEQ6EMkdK7Ew=="></script>
         </div>
     </div>

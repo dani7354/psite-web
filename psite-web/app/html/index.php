@@ -37,8 +37,8 @@
                 <?php
                     $title = htmlspecialchars($project->title);
                     $updated_at = htmlspecialchars($project->updated_at);
-                    $url = htmlspecialchars($project->url); 
-                ?> 
+                    $url = htmlspecialchars($project->url);
+                ?>
                 <li><?php echo "$title ($updated_at) - "; ?><a href="<?php echo $url; ?>">GitHub</a></li>
             <?php } ?>
             </ul>
