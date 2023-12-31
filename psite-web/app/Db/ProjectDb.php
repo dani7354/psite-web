@@ -51,7 +51,7 @@
             $connection = $this->db_connector->get_connection();
             $query = $connection->prepare("
             SELECT p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
-            FROM Project p 
+            FROM Project p
             LEFT OUTER JOIN ProjectUpdate pu ON p.Id = pu.ProjectId
             WHERE p.IsVisible = 1
             GROUP BY p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible
@@ -106,11 +106,11 @@
             $connection = $this->db_connector->get_connection();
             $query = $connection->prepare("
             SELECT p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
-            FROM Project p 
+            FROM Project p
             LEFT OUTER JOIN ProjectUpdate pu ON p.Id = pu.ProjectId
             WHERE p.IsVisible = 1 AND pu.UpdatedAt IS NOT NULL
             GROUP BY p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible
-            ORDER BY UpdatedAt DESC 
+            ORDER BY UpdatedAt DESC
             LIMIT ?");
 
             $query->bindParam(1, $count, PDO::PARAM_INT);
