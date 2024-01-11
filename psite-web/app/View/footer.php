@@ -2,9 +2,11 @@
     use App\Model\PageType;
 ?>
 <br/>
-      <footer class="container-fluid text-center">
-        <small class="align-text-bottom">&copy <?php echo date('Y') . " " . FULL_NAME; ?> </small>
-      </footer>
     </div>
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <span class="text-muted">&copy <?php echo date('Y') . " " . FULL_NAME; ?> </span>
+      </div>
+    </footer>
   </body>
 </html>
