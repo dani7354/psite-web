@@ -44,7 +44,7 @@
             <p>
                 <strong>Beskæftigelse</strong>
                 <br>
-                It-medarbejder, Forvaret, 2023-
+                It-medarbejder, Forsvaret, 2023-
                 <br>
                 Softwareudvikler, Hesehus A/S, 2021-2023
                 <br>
