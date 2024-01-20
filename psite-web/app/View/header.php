@@ -38,5 +38,5 @@
         </div>
         </nav>
       </header>
-      <main class="flex-shrink-0">
+      <main>
   
