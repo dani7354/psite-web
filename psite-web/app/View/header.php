@@ -2,17 +2,16 @@
     use App\Model\PageType;
 ?>
 <!DOCTYPE html>
-<html lang="da">
+<html lang="da" class="h-100">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo CSS_PATH . "/bootstrap.css"; ?>">
     <title><?php echo isset($page_id) && isset($pages[$page_id]) ? $pages[$page_id] . " - " . SITE_NAME : SITE_NAME; ?> </title>
   </head>
-  <body>
+  <body class="d-flex flex-column h-100">
     <script src="<?php echo JS_PATH . "/jquery.min.js"; ?>"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=
       sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs
@@ -39,5 +38,5 @@
         </div>
         </nav>
       </header>
-    <div class="container">
+      <main class="flex-shrink-0">
   
