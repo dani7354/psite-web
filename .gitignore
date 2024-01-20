@@ -7,6 +7,7 @@ TODO.txt
 .idea/
 .vscode/
 vendor/
+node_modules/
 psite_web/composer-setup.php
 psite_web/apache/log/*
 psite_web/php/fpm/log/*
