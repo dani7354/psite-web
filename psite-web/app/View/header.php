@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="<?php echo CSS_PATH . "/bootstrap.css"; ?>">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="<?php echo CSS_PATH . "/font-awesome.css"; ?>">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="<?php echo CSS_PATH . "/style.css"; ?>">
     <title><?php echo isset($page_id) && isset($pages[$page_id]) ? $pages[$page_id] . " - " . SITE_NAME : SITE_NAME; ?> </title>
   </head>
   <body class="d-flex flex-column h-100">

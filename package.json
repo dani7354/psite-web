@@ -8,7 +8,7 @@
     "build:jquery": "cp node_modules/jquery/dist/jquery.min.js psite-web/app/html/assets/js/jquery.min.js",
     "build:bootstrap_js": "cp node_modules/bootstrap/dist/js/bootstrap.bundle.js* psite-web/app/html/assets/js",
     "build:bootstrap_css": "cp node_modules/bootstrap/dist/css/bootstrap.css* psite-web/app/html/assets/css/",
-    "build:font-awesome_css": "cp node_modules/font-awesome/css/font-awesome.css* psite-web/app/html/assets/css/"
+    "build:font-awesome_css": "cp node_modules/font-awesome/css/font-awesome.css* psite-web/app/html/assets/css/",
+    "build:font-awesome_fonts": "cp -r node_modules/font-awesome/fonts psite-web/app/html/assets/fonts"
   }
 }
-
