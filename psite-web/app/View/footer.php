@@ -14,17 +14,17 @@
           <div class="p2">
             <ul class="nav list-unstyled">
               <li>
-                <a href="#">
+                <a href="//www.facebook.com/danielstuhr4/">
                   <i class="fa fa-facebook"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="//www.linkedin.com/in/daniel-stuhr-petersen/">
                   <i class="fa fa-linkedin"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="//github.com/dani7354/">
                   <i class="fa fa-github"></i>
                 </a>
               </li>
