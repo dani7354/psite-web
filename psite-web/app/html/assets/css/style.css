@@ -1,0 +1,12 @@
+/* CSS for Font Awesome SoMe icons in footer */
+.fa {
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}

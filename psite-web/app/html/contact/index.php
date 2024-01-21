@@ -89,17 +89,21 @@
             <form method="post" action="index.php">
                 <div class="form-row">
                     <div class="col">
-                    <input name="name" type="text" class="form-control" placeholder="Navn" value="<?php echo $name; ?>" required>
+                        <input name="name" type="text" class="form-control" placeholder="Navn" value="<?php echo $name; ?>" required>
                     </div>
+                </div>
+                
+                <p>
+                <div class="form-row">
                     <div class="col">
-                    <input name="email" type="email" class="form-control" placeholder="E-mail" value="<?php echo $email; ?> " required>
+                        <input name="email" type="email" class="form-control" placeholder="E-mail" value="<?php echo $email; ?> " required>
                     </div>
                 </div>
 
                 <p>
                 <div class="form-row">
                     <div class="col">
-                    <input name="subject" type="text" class="form-control" placeholder="Emne" value="<?php echo $subject; ?>" required>
+                        <input name="subject" type="text" class="form-control" placeholder="Emne" value="<?php echo $subject; ?>" required>
                     </div>
                 </div>
 
