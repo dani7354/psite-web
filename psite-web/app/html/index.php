@@ -27,10 +27,8 @@
                 Eftersom jeg arbejder med it og programmering, handler siden mest om softwareprojekter. 
                 Du finder desuden mine <a href="/contact">kontaktinformationer</a> og mit <a href="/about">cv</a>. 
             </p>
-       
         </div>
         <div class="col-sm mt-4 float-right card bg-light mb-3">
-            <!-- TODO: replace projects -->
             <h3>Seneste arbejde</h3>
             <ul>
             <?php foreach($latest_updated_projects as $project) { ?>
@@ -39,7 +37,11 @@
                     $updated_at = htmlspecialchars($project->updated_at);
                     $url = htmlspecialchars($project->url);
                 ?>
-                <li><?php echo "$title ($updated_at) - "; ?><a href="<?php echo $url; ?>">GitHub</a></li>
+                <li>
+                    <?php echo "$title ($updated_at)"; ?> <a href="<?php echo $url; ?>">
+                        <i class="fa fa-github fa-lg fa-github-project"></i>
+                    </a>
+                </li>
             <?php } ?>
             </ul>
         </div>

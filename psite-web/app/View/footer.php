@@ -25,7 +25,7 @@
               </li>
               <li>
                 <a href="//github.com/dani7354/">
-                  <i class="fa fa-github"></i>
+                  <i class="fa fa-github fa-github-profile"></i>
                 </a>
               </li>
             </ul>

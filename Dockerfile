@@ -29,7 +29,7 @@ RUN apt update && apt install -y \
 
 # Add website files
 ARG wwwroot=/var/www
-ARG composer_installer_hash=e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02
+ARG composer_installer_hash=edb40769019ccf227279e3bdd1f5b2e9950eb000c3233ee85148944e555d97be3ea4f40c3c2fe73b22f875385f6a5155
 
 RUN rm -R ${wwwroot}/html/
 COPY ./psite-web/app $wwwroot
