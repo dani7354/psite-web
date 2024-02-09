@@ -7,6 +7,16 @@
     text-decoration: none;
 }
 
+.fa-github-project {
+    font-size: 18px;
+    color: black;
+}
+
+.fa-github-profile {
+    font-size: 24px;
+    color: white;
+}
+
 .fa:hover {
     opacity: 0.7;
 }
