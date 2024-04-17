@@ -1,4 +1,4 @@
-ARG debian_release=bullseye
+ARG debian_release=bookworm
 
 FROM debian:${debian_release}
 
