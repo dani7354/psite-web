@@ -3,22 +3,22 @@ Hash: SHA256
 
 Canonical: https://stuhrs.dk/.well-known/security.txt
 Contact: mailto:d@stuhrs.dk
-Encryption: https://stuhrs.dk/assets/files/public_key.asc
+Encryption: https://keys.openpgp.org/vks/v1/by-fingerprint/9ACA000AC11D51D2AE0E02C08FAEF95A8FCCA049
 Preferred-Languages: en, fr, da
 Expires: 2024-12-31T10:00:00z
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCAAdFiEEmsoACsEdUdKuDgLAj675Wo/MoEkFAmWPuzYACgkQj675Wo/M
-oEkjZw//cBMcu9blO1jkKdaLifzb2JamTMUpErdIFhCpUfiAlOAHvtDX7XmbnK0E
-uBT7XE+TT4jc9EzFbOhWNwOHHvpceTSy1uSPI6ti7L9ksvz4/Jt0yt/FwZhdcRG6
-4zK9Fe2sEuvQO06wHpMw4TN0Sr7JPW1UXFcGSL+PzXeASd6V4al1WpLnzEe7d7Nd
-NPOv/YUpPYMb05KKoV77tIGM87jwzm9N+BnbSx3PeYoJ+mx7+onkzrlWDr+ylbp5
-nXYXWVzDH6ENiYjG2E+w8WmfLwvOCx9nJEIMHY4S6lbpojpuWj6eCjCaaxVzdRbk
-B8y39bYFz7V/qPyQodPVlEQjnSdmjjo0i0hZi/PoaGjPs7PLdUBgaGJlFAKPYsGT
-OKv1lBOoZ1WLffJQkzlrEJw2/p8uIIO0zM4PjPbKXRpRkDMwGV9zNH4Rz26AhCvp
-MZfzadYSMqJFaIRN78yOm1idYFikexcasyF4wrstLA9+oYWMF3EaFTy+Mno1ZMtB
-1WO+lzUHMoaTMtnADaQTzLw22yEt8ypxTXFdnhoA2duN0VJlAORkQuswLuHduYvO
-u0qM0FkFfH1B1zIzq5vvepwaq4m6RuPbIA2epx/R0uLgsgFe6F3Gh71pQlivQjCS
-Aj4giDnbVXiTN8HcSqu9tnGRV2KVzaH5A18l+Szn1xfcnDDi1to=
-=F29d
+iQIzBAEBCAAdFiEEmsoACsEdUdKuDgLAj675Wo/MoEkFAmYuWvoACgkQj675Wo/M
+oEkUcA//cLl82F9rhXywk0eohcsGukbhC6HYSFNsfR8YBLCT6V/MWqMZGH63QWNS
+rMbnWpyMi+AA+iqoue1AcB/phHdNb5s/+MTiwubb/qNvCXN9d4XUh6jBs+nE2zym
+XRG+/X2TkB6FtZoKAC+Hck2SD1k9Ipso4QS7IYY0dih3sfGhuD/1o8iol1090qfh
+fSQ4ZF51mpp9wQEaesOaUkMd6IaBSjkvRNSaHYLWwnXy7tsPrYFCIMypjxeXLLuu
+2p1sMPGpa/Rfj9Syy4W32SBdcqjAaS401EyBb6+W/SLLGCISMpvuxsba1f56LqNi
+B4RZsfuSPNzNFLHCmV6d3VhWaEaUg4sMnseCahXUE2LV+CZ0HqW6V8+oyNTWOhC+
+YxX14RfO6lwnyKIUFBz8Y8uRjsRCTJidiUkmy9JEaLeEhh4ckdegv3SVR+OVXnL0
+4Wt2/L+rUJOrrd7EgxTeYKftS3o53MuM7x7ShqQkPq9rgxx0oqHOIzfhcM+e5kDx
+n+RQAUXODEmm8Kb3KRnddmb0fuf5RhV+WEgtiYlpVYLXlt7p2d6cu5hCPX1c/sS5
+hK65RbMHoIDTv+7hChM717JPKNNDjRnwAeHR5mlDIO0rxrmxeAOWikP9eC4LbSfr
+kNBymCsmZslagbqHw/2cRtcMwzTbcpKHnvfjoGYNi6UAw25+yiU=
+=oJ9l
 -----END PGP SIGNATURE-----
