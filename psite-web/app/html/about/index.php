@@ -51,7 +51,7 @@
                 Studenterprogrammør, ABB A/S, 2020-2021
         </div>
         <div class="col-sm-4">
-            <img class="img-fluid rounded float-right" src="/assets/img/daniel_stuhr_petersen.png" alt="Daniel Stuhr Petersen">
+            <img class="img-fluid rounded float-right" src="/assets/img/daniel_stuhr_petersen.JPG" alt="Daniel Stuhr Petersen">
         </div>
     </div>
 </div>
