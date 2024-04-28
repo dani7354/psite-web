@@ -69,7 +69,7 @@
                 e-mail eller benytte kontaktformularen her på siden.
             </p>
           <ul>
-              <li><a href="mailto:<?php echo EMAIL; ?>">d@stuhrs.dk</a> (<a href="/assets/files/public_key.asc">PGP public key</a>)</li>
+              <li><a href="mailto:<?php echo EMAIL; ?>">d@stuhrs.dk</a> (<a href="//keys.openpgp.org/search?q=d@stuhrs.dk">PGP public key</a>)</li>
           </ul>
             <?php if (isset($errors) && !empty($errors)) { ?>
             <span>
