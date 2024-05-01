@@ -39,7 +39,7 @@
                 ?>
                 <li>
                     <?php echo "$title ($updated_at)"; ?> <a href="<?php echo $url; ?>">
-                        <i class="fa fa-github fa-lg fa-github-project"></i>
+                        <i class="fa fa-github fa-lg fa-github-frontpage"></i>
                     </a>
                 </li>
             <?php } ?>
