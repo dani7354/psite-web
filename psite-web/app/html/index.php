@@ -25,7 +25,7 @@
             <p>
                 Dette er min personlige side, hvor du kan følge med i, hvad jeg går og laver.
                 Eftersom jeg arbejder med it og programmering, handler siden mest om softwareprojekter. 
-                Du finder desuden mine <a href="/contact">kontaktinformationer</a> og mit <a href="/about">cv</a>. 
+                Du finder desuden mine <a class="link-secondary" href="/contact">kontaktinformationer</a> og mit <a class="link-secondary" href="/about">cv</a>. 
             </p>
         </div>
         <div class="col-sm mt-4 float-right card bg-light mb-3">

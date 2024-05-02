@@ -13,7 +13,7 @@
     </h1>
     <div class="row">
         <div class="col-sm-8 text-left">
-            <p>Daniel Stuhr Petersen</p>
+            <p><strong>Daniel Stuhr Petersen</strong></p>
             <p>
                 <strong>Uddannelse</strong> 
                 <br>
