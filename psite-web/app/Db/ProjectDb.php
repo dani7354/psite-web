@@ -18,11 +18,11 @@
         {
             $connection = $this->db_connector->get_connection();
             $query = $connection->query("
-            SELECT p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
+            SELECT p.Id, p.Title, p.Url, p.Description, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
             FROM Project p
             LEFT OUTER JOIN ProjectUpdate pu ON p.Id = pu.ProjectId
             WHERE p.IsVisible = 1
-            GROUP BY p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible
+            GROUP BY p.Id, p.Title, p.Url, p.Description, p.IsVisible
             ORDER BY p.OrderNumber");
 
             $projects = [];
@@ -34,7 +34,6 @@
                     $row["Title"],
                     $row["Url"],
                     $row["Description"],
-                    $row["Image"],
                     $row["UpdatedAt"],
                     $row["IsVisible"]);
 
@@ -50,11 +49,11 @@
         {
             $connection = $this->db_connector->get_connection();
             $query = $connection->prepare("
-            SELECT p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
+            SELECT p.Id, p.Title, p.Url, p.Description, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
             FROM Project p
             LEFT OUTER JOIN ProjectUpdate pu ON p.Id = pu.ProjectId
             WHERE p.IsVisible = 1
-            GROUP BY p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible
+            GROUP BY p.Id, p.Title, p.Url, p.Description, p.IsVisible
             ORDER BY p.OrderNumber LIMIT ? OFFSET ?");
 
             $offset = ($page_number - 1) * $limit;
@@ -72,7 +71,6 @@
                     $row["Title"],
                     $row["Url"],
                     $row["Description"],
-                    $row["Image"],
                     $row["UpdatedAt"],
                     $row["IsVisible"]);
 
@@ -105,11 +103,11 @@
         {
             $connection = $this->db_connector->get_connection();
             $query = $connection->prepare("
-            SELECT p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
+            SELECT p.Id, p.Title, p.Url, p.Description, p.IsVisible, MAX(pu.UpdatedAt) as UpdatedAt
             FROM Project p
             LEFT OUTER JOIN ProjectUpdate pu ON p.Id = pu.ProjectId
             WHERE p.IsVisible = 1 AND pu.UpdatedAt IS NOT NULL
-            GROUP BY p.Id, p.Title, p.Url, p.Description, p.Image, p.IsVisible
+            GROUP BY p.Id, p.Title, p.Url, p.Description, p.IsVisible
             ORDER BY UpdatedAt DESC
             LIMIT ?");
 
@@ -125,7 +123,6 @@
                     $row["Title"],
                     $row["Url"],
                     $row["Description"],
-                    $row["Image"],
                     $row["UpdatedAt"],
                     $row["IsVisible"]);
 

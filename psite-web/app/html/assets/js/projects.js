@@ -11,26 +11,25 @@ function insertProjects(projects) {
 }
 
 function insertProject(project) {
-    let html = "";
-    html += `<div class="col mb-4 d-flex align-items-stretch">`;
-    html += `<div class="card">`;
-    html += `<div class="card-body d-flex flex-column">`;
-    if (project.image !== null) {
-        html += `<a href="${project.url}">`;
-        html += `<img class="card-img-top" src="${project.image}" alt="${project.title}">`;
-        html += `</a>`;
-    }
-    html += `<h5 class="card-title">${project.title}</h5>`;
-    html += `<p class="card-text">${project.description}</p>`;
-    if (project.updated_at !== null) {
-        html += `<p class="card-text">Senest opdateret: ${project.updated_at}</p>`;
-    }
-    html += `<a href="${project.url}" class="btn btn-secondary mt-auto">Gå til kildekode</a>`;
-    html += `</div>`;
-    html += `</div>`;
-    html += `</div>`;
+    let projectDiv = $("<div></div>").addClass("col mb-4 d-flex align-items-stretch");
+    let cardDiv = $("<div></div>").addClass("card d-flex flex-column");
+    projectDiv.append(cardDiv);
+    let cardBodyDiv = $("<div></div>").addClass("card-body");
+    cardDiv.append(cardBodyDiv);
 
-    projectContainer.append(html);
+    let title = $("<h5></h5>").addClass("card-title");
+    let titleLink = $("<a></a>").addClass("link-secondary").attr("href", project.url).text(project.title);
+    let iconLink = $("<i></i>").addClass("fa fa-github fa-lg fa-github-project");
+    title.append(titleLink);
+    title.append(iconLink);
+    cardBodyDiv.append(title);
+
+    cardBodyDiv.append($("<p></p>").addClass("card-text").text(project.description));
+    if (project.updated_at !== null) {
+        cardBodyDiv.append($("<p></p>").addClass("card-text").text(`Senest opdateret: ${project.updated_at}`));
+    }
+
+    projectContainer.append(projectDiv);
 }
 
 function getProjects(page_number, page_size) {
@@ -58,7 +57,7 @@ $(document).ready(function () {
     loadNext(nextPage, pageSize);
 });
 
-nextButton.click(function () {
+nextButton.on("click", function () {
     if(nextPage !== null) {
         loadNext(nextPage, pageSize);
     }

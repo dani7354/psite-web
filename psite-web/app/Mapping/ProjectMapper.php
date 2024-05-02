@@ -9,7 +9,6 @@ class ProjectMapper
 {
   public static function map_list(
       array $projects,
-      string $image_directory,
       int $project_count,
       int $page_number,
       int $projects_per_page) : PaginatedProjectListResponse
@@ -18,7 +17,7 @@ class ProjectMapper
 
     foreach ($projects as $project)
     {
-      $project_response = self::map_item($project, $image_directory);
+      $project_response = self::map_item($project);
       array_push($project_responses, $project_response);
     }
 
@@ -31,15 +30,13 @@ class ProjectMapper
   }
 
   private static function map_item(
-      Project $project,
-      string $image_directory) : ProjectResponse
+      Project $project) : ProjectResponse
   {
     return new ProjectResponse(
       $project->id,
       htmlspecialchars($project->title),
       htmlspecialchars($project->url),
       htmlspecialchars($project->description),
-      isset($project->image) ? $image_directory . htmlspecialchars($project->image) : null,
       isset($project->updated_at) ? htmlspecialchars($project->updated_at) : null);
   }
 }
