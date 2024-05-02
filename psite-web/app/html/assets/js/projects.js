@@ -17,10 +17,13 @@ function insertProject(project) {
     let cardBodyDiv = $("<div></div>").addClass("card-body");
     cardDiv.append(cardBodyDiv);
 
-    cardBodyDiv.append(
-        $("<h5></h5>").addClass("card-title").text(project.title).append(
-            $("<a></a>").attr("href", project.url).append(
-                $("<i></i>").addClass("fa fa-github fa-lg fa-github-project"))));
+    let title = $("<h5></h5>").addClass("card-title");
+    let titleLink = $("<a></a>").addClass("link-secondary").attr("href", project.url).text(project.title);
+    let iconLink = $("<i></i>").addClass("fa fa-github fa-lg fa-github-project");
+    title.append(titleLink);
+    title.append(iconLink);
+    cardBodyDiv.append(title);
+
     cardBodyDiv.append($("<p></p>").addClass("card-text").text(project.description));
     if (project.updated_at !== null) {
         cardBodyDiv.append($("<p></p>").addClass("card-text").text(`Senest opdateret: ${project.updated_at}`));
@@ -54,7 +57,7 @@ $(document).ready(function () {
     loadNext(nextPage, pageSize);
 });
 
-nextButton.click(function () {
+nextButton.on("click", function () {
     if(nextPage !== null) {
         loadNext(nextPage, pageSize);
     }
