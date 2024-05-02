@@ -9,7 +9,6 @@
   const PAGE_NUMBER = "page_number";
   const PAGE_ITEM_COUNT = "page_item_count";
   
-  $project_images_path = IMG_PATH . "/projects/";
   $page_number = 1;
   $page_item_count = 10;
 
@@ -37,7 +36,6 @@
 
     $paginated_response = ProjectMapper::map_list(
       $projects,
-      $project_images_path,
       $project_count,
       $page_number,
       $page_item_count);
