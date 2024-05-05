@@ -26,10 +26,10 @@ jobs:
       - name: Composer Init
         uses: php-actions/composer@v6
         env:
-          COMPOSER: "psite-web/app/composer.json"
+          COMPOSER: "composer.json"
         with:
           php_version: "8.3"
-          php_extensions: soap intl gd
+          php_extensions: gd
           args: "--ignore-platform-reqs --optimize-autoloader"
           working_dir: "psite-web/app"
 
