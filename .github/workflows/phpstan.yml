@@ -20,14 +20,18 @@ jobs:
       - name: Cache Composer dependencies
         uses: actions/cache@v3
         with:
-          path: ./vendor
+          path: ./psite-web/app/vendor
           key: composer-${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
 
       - name: Composer Init
         uses: php-actions/composer@v6
+        env:
+          COMPOSER: "psite-web/app/composer.json"
         with:
           php_version: "8.3"
           php_extensions: soap intl gd
+          args: "--ignore-platform-reqs --optimize-autoloader"
+          working_dir: "psite-web/app"
 
       - name: PHPStan Analysis
         run: |
