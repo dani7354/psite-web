@@ -1,0 +1,6 @@
+parameters:
+    level: 1
+    paths:
+        - psite-web/app
+    bootstrapFiles:
+        - psite-web/app/vendor/autoload.php
