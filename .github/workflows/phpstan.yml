@@ -35,21 +35,4 @@ jobs:
 
       - name: PHPStan Analysis
         run: |
-          ./psite-web/app/vendor/bin/phpstan analyse --configuration=phpstan.neon --memory-limit=1024M --error-format=md --no-progress >> 'Static Analysis.md'
-
-      - name: Wiki checkout
-        uses: actions/checkout@v4
-        with:
-          repository: ${{github.repository}}.wiki
-          path: 'wiki'
-
-      - name: Push
-        run: |
-          mv 'Static Analysis.md' wiki
-          cd wiki
-          ls -la
-          git config user.name actions-runner
-          git config user.email actions-runner@github.com
-          git add .
-          git commit -m "Add Coverage and Analysis files" 
-          git push
+          ./psite-web/app/vendor/bin/phpstan analyse --configuration=phpstan.neon --memory-limit=1024M
