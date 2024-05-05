@@ -29,7 +29,6 @@ jobs:
           COMPOSER: "composer.json"
         with:
           php_version: "8.3"
-          php_extensions: gd
           args: "--ignore-platform-reqs --optimize-autoloader"
           working_dir: "psite-web/app"
 
