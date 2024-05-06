@@ -3,4 +3,4 @@ parameters:
     paths:
         - psite-web/app
     bootstrapFiles:
-        - psite-web/app/vendor/autoload.php
+        - autoload.php
