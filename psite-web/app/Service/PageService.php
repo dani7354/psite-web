@@ -3,7 +3,9 @@
 
     use App\Model\PageType;
 
-    class PageService {
+    class PageService 
+    {
+        private readonly array $pages;
 
         function __construct() 
         {
@@ -20,4 +22,4 @@
             return $this->pages[$page_type->value];
         }
     }
-?> 
+?>
