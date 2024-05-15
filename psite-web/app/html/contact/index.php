@@ -93,7 +93,7 @@
                 e-mail eller benytte kontaktformularen her på siden.
             </p>
           <ul>
-              <li><a href="mailto:<?php echo SiteInfo::EMAIL; ?>"><?php echo SiteInfo::EMAIL; ?></a> (<a href="<?php echo "//keys.openpgp.org/search?q=" . SiteInfo::EMAIL; ?>">PGP public key</a>)</li>
+              <li><a class="link-secondary" href="mailto:<?php echo SiteInfo::EMAIL; ?>"><?php echo SiteInfo::EMAIL; ?></a> (<a class="link-secondary" href="<?php echo "//keys.openpgp.org/search?q=" . SiteInfo::EMAIL; ?>">PGP public key</a>)</li>
           </ul>
             <?php if (isset($errors) && !empty($errors)) { ?>
             <span>
