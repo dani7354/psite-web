@@ -9,9 +9,9 @@
     {
         private readonly MySqlPdoConnector $db_connector;
 
-        public function __construct()
+        public function __construct(string $host, string $port, string $db_name, string $user, string $password)
         {
-            $this->db_connector = new MySqlPdoConnector();
+            $this->db_connector = new MySqlPdoConnector($host, $port, $db_name, $user, $password);
         }
 
         public function create(Message $message) : bool

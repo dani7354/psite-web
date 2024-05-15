@@ -5,6 +5,8 @@
   use App\Mapping\ProjectMapper;
   use App\Model\Project\PaginatedProjectListResponse;
   use App\Helper\Security\ErrorHandler;
+  use App\Shared\DatabaseInfo;
+  use App\Service\ProjectService;
 
   const PAGE_NUMBER = "page_number";
   const PAGE_ITEM_COUNT = "page_item_count";
@@ -24,15 +26,21 @@
     }
 
     $is_parameters_valid = $page_number >= 1 && $page_item_count >= 1;
-
     if (!$is_parameters_valid)
     {
       ErrorHandler::display_error_message_json("Invalid parameters!", 400);
     }
 
-    $project_db = new ProjectDb();
-    $project_count = $project_db->get_total_count();
-    $projects = $project_db->get_page($page_number, $page_item_count);
+    $project_service = new ProjectService(
+      new ProjectDb(
+        DatabaseInfo::get_host(), 
+        DatabaseInfo::get_port(), 
+        DatabaseInfo::get_name(),
+        DatabaseInfo::get_user(), 
+        DatabaseInfo::get_password()));
+
+    $project_count = $project_service->get_project_count();
+    $projects = $project_service->get_projects_page($page_number, $page_item_count);
 
     $paginated_response = ProjectMapper::map_list(
       $projects,

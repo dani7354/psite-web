@@ -1,7 +1,7 @@
 <?php 
-    namespace App\Helper\Security;
+    namespace App\Service;
 
-    class CaptchaHelper
+    class CaptchaService
     {
         private const LENGTH = 7;
         private const CHARS = "abcdefghijklmnopqrstuvwxyz1234567890";

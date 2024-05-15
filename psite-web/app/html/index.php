@@ -6,9 +6,11 @@
     use App\Model\Project\Project;
     use App\Db\ProjectDb;
     use App\Service\ProjectService;
+    use App\Service\PageService;
 
     $current_page_id = PageType::Home->value;
 
+    $page_service = new PageService();
     $project_service = new ProjectService(
         new ProjectDb(
             DatabaseInfo::get_host(), 
@@ -26,7 +28,7 @@
     <div class="row">
         <div class="col-md text-left">
             <h1>
-                <?php echo $pages[$current_page_id]; ?>
+                <?php echo $page_service->get_page_title(PageType::Home); ?>
             </h1>
             <p>
                 Velkommen til min hjemmeside!

@@ -24,7 +24,7 @@ class ProjectService
 
     function get_project_count() : int
     {
-        return $this->project_db->count();
+        return $this->project_db->get_total_count();
     }
 
     function get_last_updated_projects(int $count) : array
