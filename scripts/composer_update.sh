@@ -2,11 +2,11 @@
 # Update Composer requirements
 
 # Require (phpstan) for dev
-#composer -d psite-web/app/ require --dev phpstan/phpstan
+#composer -d psite-web require --dev phpstan/phpstan
 
 # Require (phpstan) for prod
-# composer -d psite-web/app/ require phpstan/phpstan
+# composer -d psite-web require phpstan/phpstan
 
 
-#composer -d ../psite-web/app/ update
-#composer -d ../psite-web/app/ dump-autoload 
+#composer -d ../psite-web update
+#composer -d ../psite-web dump-autoload 
