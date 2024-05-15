@@ -15,22 +15,6 @@
     # Requires and includes for all pages
     require_once(VENDOR_PATH . "/autoload.php");
 
-    use App\Model\PageType;
-
-    # Site information
-    const SITE_NAME = "Stuhrs.dk";
-    const DOMAIN = "www.stuhrs.dk";
-    const FULL_NAME = "Daniel Stuhr Petersen";
-    const EMAIL = "d@stuhrs.dk";
-
-    # Page titles
-    $pages = [
-        PageType::Home->value => "Forside",
-        PageType::Project->value => "Projekter",
-        PageType::Contact->value => "Kontakt",
-        PageType::About->value => "Om"
-    ];
-
     # Database information
     define("DB_HOST", getenv("DB_HOST"));
     define("DB_PORT", 3306);

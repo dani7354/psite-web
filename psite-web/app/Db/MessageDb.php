@@ -3,6 +3,7 @@
 
     use App\Db\MySqlPdoConnector;
     use PDO;
+    use App\Model\Message;
 
     class MessageDb
     {
@@ -13,7 +14,7 @@
             $this->db_connector = new MySqlPdoConnector();
         }
 
-        public function create($message) : bool
+        public function create(Message $message) : bool
         {
             $connection = $this->db_connector->get_connection();
             $stmt = $connection->prepare("INSERT INTO

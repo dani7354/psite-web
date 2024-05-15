@@ -37,4 +37,3 @@
 </div>
 
 <?php include_once HTML_ELEMENTS_PATH . "/footer.php"; ?>
-  

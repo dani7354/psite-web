@@ -1,6 +1,9 @@
 parameters:
-    level: 0
+    level: 4
     paths:
         - ./
     bootstrapFiles:
         - vendor/autoload.php
+        - initialize.php
+    excludePaths:
+        - vendor/*

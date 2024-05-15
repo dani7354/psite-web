@@ -12,7 +12,7 @@
         public readonly ?int $next_page_number,
         public readonly ?int $previous_page_number) { }
 
-     public function jsonSerialize()
+     public function jsonSerialize() : array
      {
         $json_data["projects"] = $this->projects;
         $json_data["project_count"] = $this->project_count;

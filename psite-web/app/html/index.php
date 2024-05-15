@@ -2,13 +2,22 @@
     require_once "../initialize.php";
 
     use App\Model\PageType;
+    use App\Shared\DatabaseInfo;
     use App\Model\Project\Project;
     use App\Db\ProjectDb;
+    use App\Service\ProjectService;
 
     $current_page_id = PageType::Home->value;
 
-    $project_db = new ProjectDb();
-    $latest_updated_projects = $project_db->get_last_updated_projects(5);
+    $project_service = new ProjectService(
+        new ProjectDb(
+            DatabaseInfo::get_host(), 
+            DatabaseInfo::get_port(), 
+            DatabaseInfo::get_name(),
+            DatabaseInfo::get_user(), 
+            DatabaseInfo::get_password()));
+
+    $latest_updated_projects = $project_service->get_last_updated_projects(5);
 ?>
 
 <?php include_once HTML_ELEMENTS_PATH . "/header.php"; ?>
