@@ -1,4 +1,4 @@
-name: PHPStan Analysis and PHPUnit Coverage Report
+name: PHPStan Analysis
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       branches: [ "main" ]
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   build:
@@ -20,18 +20,18 @@ jobs:
       - name: Cache Composer dependencies
         uses: actions/cache@v3
         with:
-          path: ./psite-web/app/vendor
+          path: psite-web/vendor
           key: composer-${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
 
       - name: Composer Init
         uses: php-actions/composer@v6
         env:
-          COMPOSER: "composer.json"
+          COMPOSER: "psite-web/composer.json"
         with:
           php_version: "8.3"
           args: "--ignore-platform-reqs --optimize-autoloader"
-          working_dir: "psite-web/app"
+          working_dir: "psite-web/"
 
       - name: PHPStan Analysis
         run: |
-          ./psite-web/app/vendor/bin/phpstan analyse --configuration=psite-web/app/phpstan.neon --memory-limit=1024M
+          ./psite-web/vendor/bin/phpstan analyse --configuration=psite-web/phpstan.neon --memory-limit=1024M
