@@ -11,10 +11,3 @@
 
     # Requires and includes for all pages
     require_once(VENDOR_PATH . "/autoload.php");
-
-    # Database information
-    define("DB_HOST", getenv("DB_HOST"));
-    define("DB_PORT", 3306);
-    define("DB_NAME", getenv("DB_NAME"));
-    define("DB_USER", getenv("DB_USER"));
-    define("DB_PASSWORD", getenv("DB_PASSWORD"));
