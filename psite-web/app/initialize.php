@@ -6,7 +6,7 @@
     define("PROJECT_ROOT", dirname(dirname(__FILE__)));
     define("APP_ROOT_PATH", dirname(__FILE__));
     define("WWW_ROOT", $doc_root);
-    const VENDOR_PATH = PROJECT_ROOT . "/vendor";
+    const VENDOR_PATH = APP_ROOT_PATH . "/vendor";
     const HTML_ELEMENTS_PATH = APP_ROOT_PATH . "/View";
 
     # Requires and includes for all pages

@@ -25,6 +25,7 @@ RUN apt update && apt install -y \
     php${php_version}-gd \
     php${php_version}-mbstring \
     php${php_version}-mysql \
+    php${php_version}-xml \
     && apt clean
 
 # Add website files
@@ -43,7 +44,7 @@ RUN mv composer.phar /usr/local/sbin/composer
 RUN rm composer-setup.php
 
 WORKDIR $wwwroot
-RUN composer install
+RUN composer install --no-dev
 
 # Copy apache configs
 COPY ./psite-web/apache/apache2.conf /etc/apache2/apache2.conf
