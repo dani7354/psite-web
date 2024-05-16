@@ -55,4 +55,3 @@
             return $this->message_db->create($message);
         }
     }
-?>

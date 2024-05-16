@@ -24,4 +24,3 @@
         return hash_equals($_SESSION[self::TOKEN], $token);
         }
     }
-?>

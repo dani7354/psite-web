@@ -1,7 +1,7 @@
 <?php 
     namespace App\Shared;
 
-    class SiteInfo 
+    class SiteInfo
     {
         const SITE_NAME = "Stuhrs.dk";
         const DOMAIN = "www.stuhrs.dk";
@@ -12,4 +12,3 @@
         const LINKEDIN = "https://www.linkedin.com/in/daniel-stuhr-petersen/";
         const GITHUB = "https://github.com/dani7354/";
     }
-?>

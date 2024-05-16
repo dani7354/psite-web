@@ -9,7 +9,7 @@
     use App\Model\Project\Project;
     use App\Model\PageType;
     use App\Shared\DatabaseInfo;
- 
+
     $page_service = new PageService();
     $url_service = new UrlService();
 
@@ -18,12 +18,12 @@
     try
     {
         $project_db = new ProjectDb(
-            DatabaseInfo::get_host(), 
-            DatabaseInfo::get_port(), 
+            DatabaseInfo::get_host(),
+            DatabaseInfo::get_port(),
             DatabaseInfo::get_name(),
-            DatabaseInfo::get_user(), 
+            DatabaseInfo::get_user(),
             DatabaseInfo::get_password());
-            
+
         $project_service = new ProjectService($project_db);
         $projects = $project_db->all();
     }

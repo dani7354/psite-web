@@ -1,11 +1,10 @@
 <?php
+    use PHPUnit\Framework\TestCase;
 
-use PHPUnit\Framework\TestCase;
-
-final class ExceptionTest extends TestCase
-{
-    public function testSame(): void
+    final class ExceptionTest extends TestCase
     {
-        $this->assertSame(2, 2);
+        public function testSame(): void
+        {
+            $this->assertSame(2, 2);
+        }
     }
-}

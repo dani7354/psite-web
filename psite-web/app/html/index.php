@@ -1,6 +1,6 @@
 <?php
     require_once "../initialize.php";
-    
+
     use App\Model\PageType;
     use App\Shared\DatabaseInfo;
     use App\Model\Project\Project;
@@ -13,10 +13,10 @@
     $page_service = new PageService();
     $project_service = new ProjectService(
         new ProjectDb(
-            DatabaseInfo::get_host(), 
-            DatabaseInfo::get_port(), 
+            DatabaseInfo::get_host(),
+            DatabaseInfo::get_port(),
             DatabaseInfo::get_name(),
-            DatabaseInfo::get_user(), 
+            DatabaseInfo::get_user(),
             DatabaseInfo::get_password()));
 
     $latest_updated_projects = $project_service->get_last_updated_projects(5);
@@ -35,8 +35,8 @@
             </p>
             <p>
                 Dette er min personlige side, hvor du kan følge med i, hvad jeg går og laver.
-                Eftersom jeg arbejder med it og programmering, handler siden mest om softwareprojekter. 
-                Du finder desuden mine <a class="link-secondary" href="/contact">kontaktinformationer</a> og mit <a class="link-secondary" href="/about">cv</a>. 
+                Eftersom jeg arbejder med it og programmering, handler siden mest om softwareprojekter.
+                Du finder desuden mine <a class="link-secondary" href="/contact">kontaktinformationer</a> og mit <a class="link-secondary" href="/about">cv</a>.
             </p>
         </div>
         <div class="col-sm mt-4 float-right card bg-light mb-3">

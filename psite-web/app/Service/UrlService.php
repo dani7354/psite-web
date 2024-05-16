@@ -2,14 +2,14 @@
 
     namespace App\Service;
 
-    class UrlService 
+    class UrlService
     {
         private readonly string $assets_path;
         private readonly string $css_base_url;
         private readonly string $js_base_url;
         private readonly string $img_base_url;
-        
-        public function __construct() 
+
+        public function __construct()
         {
             $this->assets_path = "/assets";
             $this->css_base_url = $this->assets_path . "/css";
@@ -32,4 +32,3 @@
             return $this->img_base_url . "/" . $img_file;
         }
     }
-?>

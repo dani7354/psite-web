@@ -10,7 +10,7 @@
 
   const PAGE_NUMBER = "page_number";
   const PAGE_ITEM_COUNT = "page_item_count";
-  
+
   $page_number = 1;
   $page_item_count = 10;
 
@@ -33,10 +33,10 @@
 
     $project_service = new ProjectService(
       new ProjectDb(
-        DatabaseInfo::get_host(), 
-        DatabaseInfo::get_port(), 
+        DatabaseInfo::get_host(),
+        DatabaseInfo::get_port(),
         DatabaseInfo::get_name(),
-        DatabaseInfo::get_user(), 
+        DatabaseInfo::get_user(),
         DatabaseInfo::get_password()));
 
     $project_count = $project_service->get_project_count();

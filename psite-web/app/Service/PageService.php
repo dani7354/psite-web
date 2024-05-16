@@ -1,13 +1,13 @@
-<?php 
+<?php
     namespace App\Service;
 
     use App\Model\PageType;
 
-    class PageService 
+    class PageService
     {
         private readonly array $pages;
 
-        public function __construct() 
+        public function __construct()
         {
             $this->pages = [
                 PageType::Home->value => "Forside",
@@ -17,9 +17,8 @@
             ];
         }
 
-        public function get_page_title(PageType $page_type) : string 
+        public function get_page_title(PageType $page_type) : string
         {
             return $this->pages[$page_type->value];
         }
     }
-?>

@@ -3,11 +3,11 @@
 
     use App\Db\ProjectDb;
 
-    class ProjectService 
+    class ProjectService
     {
         private readonly ProjectDb $project_db;
 
-        public function __construct(ProjectDb $project_db) 
+        public function __construct(ProjectDb $project_db)
         {
             $this->project_db = $project_db;
         }
@@ -32,4 +32,3 @@
             return $this->project_db->get_last_updated_projects($count);
         }
     }
-?>
