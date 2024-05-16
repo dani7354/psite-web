@@ -6,7 +6,7 @@
     use App\Helper\Validation\InputValidator;
     use App\Helper\CaptchaHelper;
 
-    class MessageService 
+    class MessageService
     {
         private readonly MessageDb $message_db;
 
@@ -23,9 +23,9 @@
             $content_min = 1;
 
             $errors = [];
-            
+
             if (!InputValidator::has_valid_email_format($message->sender_email))
-            {   
+            {
                 $errors[] = "E-mailen er ikke i det tilladte format";
             }
             if (InputValidator::is_blank($message->sender_name) ||
