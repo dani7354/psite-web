@@ -60,3 +60,4 @@
             $_SESSION[self::SESSION_VARIABLE] = $captcha;
         }
     }
+?>

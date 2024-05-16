@@ -7,7 +7,7 @@
     {
         private readonly array $pages;
 
-        function __construct() 
+        public function __construct() 
         {
             $this->pages = [
                 PageType::Home->value => "Forside",
@@ -17,7 +17,7 @@
             ];
         }
 
-        function get_page_title(PageType $page_type) : string 
+        public function get_page_title(PageType $page_type) : string 
         {
             return $this->pages[$page_type->value];
         }

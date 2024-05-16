@@ -5,7 +5,7 @@
 
     class MySqlPdoConnector
     {
-        function __construct(
+        public function __construct(
             private readonly string $host,
             private readonly string $port,
             private readonly string $name,
