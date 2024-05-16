@@ -1,6 +1,6 @@
 <?php
     require_once "../initialize.php";
-
+    
     use App\Model\PageType;
     use App\Shared\DatabaseInfo;
     use App\Model\Project\Project;
