@@ -4,6 +4,6 @@ parameters:
         - ./
     bootstrapFiles:
         - vendor/autoload.php
-        - app/initialize.php
+        - initialize.php
     excludePaths:
         - vendor/*
