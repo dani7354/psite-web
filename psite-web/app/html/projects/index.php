@@ -45,9 +45,7 @@
             <div id="project-container" class="row row-cols-1 row-cols-md-3 g-3"></div>
             <button id="next-button" type="button" class="btn btn-primary">Vis flere</button>
             <script src="<?php echo $url_service->get_js_url("projects.js"); ?>"
-            integrity="sha256-7a85swzrNF5Jm0EJBwn9zKN5uNsWvtCrkeRK8RVwMaU=
-            sha384-rsSyLIKkW2NxHclVA3kY5fuvAFIeb9y1I8dIHbSjySt+L8u2wUXquK6Sis0wltQO
-            sha512-9hkpRM9jMk/V+7agdG9uBPiN7rWf2bjIqXr+OiTg0Vzz4xqkhnpDPFEUG1ELxQtbRtXhlGcJudkEL9BzXmlw2A=="></script>
+            integrity="<?php $url_service->get_integrity_attribute("projects.js"); ?>"></script>
         </div>
     </div>
 </div>
