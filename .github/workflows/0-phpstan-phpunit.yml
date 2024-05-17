@@ -1,4 +1,4 @@
-name: PHPStan Analysis
+name: PHPStan Analysis and PHPUnit Testing
 
 on:
   push:
@@ -35,3 +35,7 @@ jobs:
       - name: PHPStan Analysis
         run: |
           ./psite-web/app/vendor/bin/phpstan analyse --configuration=psite-web/app/phpstan.neon --memory-limit=1024M
+
+      - name: PHPUnit Testing
+        run: |
+          ./psite-web/app/vendor/bin/phpunit --stop-on-failure ./psite-web/test
