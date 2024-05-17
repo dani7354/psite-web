@@ -36,6 +36,8 @@ jobs:
         run: |
           ./psite-web/app/vendor/bin/phpstan analyse --configuration=psite-web/app/phpstan.neon --memory-limit=1024M
 
-      - name: PHPUnit Testing
-        run: |
-          ./psite-web/app/vendor/bin/phpunit --stop-on-failure ./psite-web/test
+      - name: PHPUnit Tests
+        uses: php-actions/phpunit@v3
+        with:
+          php_version: 8.3
+          args: "--stop-on-failure psite-web/test"
