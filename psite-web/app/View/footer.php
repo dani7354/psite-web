@@ -1,5 +1,6 @@
 <?php
-    use App\Model\PageType;
+  use App\Service\UrlService;
+  use App\Shared\SiteInfo;
 ?>
 <br/>
 </main>
@@ -8,23 +9,23 @@
         <div class="d-flex align-items-center">
           <div class="p2 flex-grow-1">
             <span class="text-light">
-              &copy; <?php echo date('Y') . " " . FULL_NAME; ?>
+              &copy; <?php echo date('Y') . " " . SiteInfo::FULL_NAME; ?>
             </span>
           </div>
           <div class="p2">
             <ul class="nav list-unstyled">
               <li>
-                <a href="//www.facebook.com/danielstuhr4/">
+                <a href="<?php echo SiteInfo::FACEBOOK; ?>">
                   <i class="fa fa-facebook"></i>
                 </a>
               </li>
               <li>
-                <a href="//www.linkedin.com/in/daniel-stuhr-petersen/">
+                <a href="<?php echo SiteInfo::LINKEDIN; ?> ">
                   <i class="fa fa-linkedin"></i>
                 </a>
               </li>
               <li>
-                <a href="//github.com/dani7354/">
+                <a href="<?php echo SiteInfo::GITHUB; ?>">
                   <i class="fa fa-github fa-github-profile"></i>
                 </a>
               </li>

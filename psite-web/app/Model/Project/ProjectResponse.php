@@ -12,7 +12,7 @@
           public readonly string $description,
           public readonly ?string $updated_at) { }
 
-          public function jsonSerialize()
+          public function jsonSerialize() : array
           {
              $json_data["id"] = $this->id;
              $json_data["title"] = $this->title;

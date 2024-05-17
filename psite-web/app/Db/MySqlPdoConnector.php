@@ -5,11 +5,19 @@
 
     class MySqlPdoConnector
     {
+        public function __construct(
+            private readonly string $host,
+            private readonly string $port,
+            private readonly string $name,
+            private readonly string $user,
+            private readonly string $password) { }
+
+
         public function get_connection() : PDO
         {
-            $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";port=" . DB_PORT;
+            $dsn = "mysql:host=" . $this->host . ";dbname=" . $this->name . ";port=" . $this->port;
 
-            return new PDO($dsn, DB_USER, DB_PASSWORD);
+            return new PDO($dsn, $this->user, $this->password);
         }
 
         public function close_connection(&$db)

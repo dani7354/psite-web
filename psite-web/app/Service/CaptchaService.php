@@ -1,7 +1,7 @@
-<?php 
-    namespace App\Helper\Security;
+<?php
+    namespace App\Service;
 
-    class CaptchaHelper
+    class CaptchaService
     {
         private const LENGTH = 7;
         private const CHARS = "abcdefghijklmnopqrstuvwxyz1234567890";
@@ -53,7 +53,7 @@
             }
 
             return hash_equals($_SESSION[self::SESSION_VARIABLE], $input);
-	    }
+        }
 
         private static function set_captcha_for_session($captcha)
         {

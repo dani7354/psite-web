@@ -41,7 +41,7 @@
                exit();
         }
 
-        public static function display_error_message($message, $response_code)
+        public static function display_error_message(string $message, int $response_code)
         {
             $response_message = self::$http_errors[$response_code];
             header($_SERVER["SERVER_PROTOCOL"] . " $response_code $response_message ");

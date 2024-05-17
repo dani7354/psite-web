@@ -2,6 +2,12 @@
   require_once "../../initialize.php"; 
 
   use App\Model\PageType;
+  use App\Service\PageService;
+  use App\Service\UrlService;
+
+  $page_service = new PageService();
+  $url_service = new UrlService();
+
   $current_page_id = PageType::About->value;
 ?>
 
@@ -9,7 +15,7 @@
 
 <div class="container mt-4">
     <h1>
-        <?php echo $pages[$current_page_id]; ?>
+        <?php echo $page_service->get_page_title(PageType::About); ?>
     </h1>
     <div class="row">
         <div class="col-sm-8 text-left">
@@ -31,10 +37,9 @@
                 Studenterprogrammør, ABB A/S, 2020-2021
         </div>
         <div class="col-sm-4">
-            <img class="img-fluid rounded float-right" src="/assets/img/daniel_stuhr_petersen.JPG" alt="Daniel Stuhr Petersen">
+            <img class="img-fluid rounded float-right" src="<?php echo $url_service->get_img_url("daniel_stuhr_petersen.JPG"); ?>" alt="Daniel Stuhr Petersen">
         </div>
     </div>
 </div>
 
 <?php include_once HTML_ELEMENTS_PATH . "/footer.php"; ?>
-  
