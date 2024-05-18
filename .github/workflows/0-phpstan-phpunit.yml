@@ -42,4 +42,5 @@ jobs:
           version: 11.1
           memmory_limit: 1024M
           php_version: 8.3
+          boostrap: psite-web/app/initialize.php
           configuration: phpunit.xml
