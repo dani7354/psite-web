@@ -34,7 +34,7 @@
     <script src="<?php echo $url_service->get_js_url("bootstrap.bundle.js"); ?>"
       integrity="<?php echo $url_service->get_integrity_attribute("bootstrap.bundle.js"); ?>"></script>
       <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
         <a class="navbar-brand" href="/"><?php echo SiteInfo::SITE_NAME; ?></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">

@@ -1,5 +1,5 @@
-<?php 
-  require_once "../../initialize.php"; 
+<?php
+  require_once "../../initialize.php";
 
   use App\Model\PageType;
   use App\Service\PageService;
@@ -21,7 +21,7 @@
         <div class="col-sm-8 text-left">
             <p><strong>Daniel Stuhr Petersen</strong></p>
             <p>
-                <strong>Uddannelse</strong> 
+                <strong>Uddannelse</strong>
                 <br>
                 Professionsbachelor i it-sikkerhed, Københavns Erhvervsakademi, 2020-2021
                 <br>
