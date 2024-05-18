@@ -28,3 +28,4 @@ jobs:
             -Dsonar.projectKey=dani7354_psite-web
             -Dsonar.organization=dani7354
             -Dsonar.sources=.
+            -Dsonar.exclusions=psite-web/app/html/assets/**

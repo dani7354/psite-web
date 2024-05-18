@@ -3,6 +3,7 @@
 *.phar
 *.lock
 *.cache
+.phpunit.result.cache
 TODO.txt
 
 .idea/
