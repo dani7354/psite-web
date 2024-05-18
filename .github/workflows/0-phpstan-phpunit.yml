@@ -37,7 +37,9 @@ jobs:
           ./psite-web/app/vendor/bin/phpstan analyse --configuration=psite-web/app/phpstan.neon --memory-limit=1024M
 
       - name: PHPUnit Tests
-        uses: php-actions/phpunit@v3
+        uses: php-actions/phpunit@v4
         with:
+          version: 11.1
+          memmory_limit: 1024M
           php_version: 8.3
           configuration: phpunit.xml
