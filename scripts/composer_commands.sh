@@ -7,6 +7,5 @@
 # Require (phpstan) for prod
 # composer -d psite-web require phpstan/phpstan
 
-
-#composer -d ../psite-web update
-#composer -d ../psite-web dump-autoload 
+#composer -d ../psite-web update --no-dev
+#composer -d ../psite-web dump-autoload
