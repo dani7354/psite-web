@@ -2,6 +2,7 @@
 *.swp
 *.phar
 *.lock
+*.cache
 TODO.txt
 
 .idea/
