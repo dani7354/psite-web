@@ -40,4 +40,4 @@ jobs:
         uses: php-actions/phpunit@v4
         with:
           php_version: 8.3
-          args: "psite-web/test"
+          configuration: phpunit.xml
