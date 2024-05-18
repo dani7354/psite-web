@@ -20,7 +20,7 @@ jobs:
       - name: Cache Composer dependencies
         uses: actions/cache@v3
         with:
-          path: psite-web/app/vendor
+          path: "psite-web/app/vendor"
           key: composer-${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
 
       - name: Composer Init
@@ -39,8 +39,8 @@ jobs:
       - name: PHPUnit Tests
         uses: php-actions/phpunit@v4
         with:
-          version: 11.1
-          memmory_limit: 1024M
-          php_version: 8.3
-          bootstrap: psite-web/app/initialize.php
-          configuration: phpunit.xml
+          version: "11.1"
+          memmory_limit: "1024M"
+          php_version: "8.3"
+          bootstrap: "psite-web/app/initialize.php"
+          configuration: "phpunit.xml"
