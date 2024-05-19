@@ -1,7 +1,7 @@
 <phpunit>
     <testsuites>
         <testsuite name="unit tests">
-            <directory>psite-web/test</directory>
+            <directory>psite-web/test/unit</directory>
         </testsuite>
     </testsuites>
 </phpunit>

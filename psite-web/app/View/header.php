@@ -9,10 +9,7 @@
     $page_service = DiContainer::get(PageServiceInterface::class);
     $url_service = DiContainer::get(UrlServiceInterface::class);
 
-    if (!isset($current_page_id))
-    {
-        $current_page_id = PageType::Home->value;
-    }
+    $current_page_id = $page_service->get_page_type_for_current($_SERVER["REQUEST_URI"]);
 ?>
 <!DOCTYPE html>
 <html lang="da" class="h-100">
@@ -26,7 +23,7 @@
     <link rel="stylesheet" href="<?php echo $url_service->get_css_url("font-awesome.css"); ?>">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php echo $url_service->get_css_url("style.css"); ?>">
-    <title><?php echo $page_service->get_page_title(PageType::Home) . " - " . SiteInfo::SITE_NAME; ?> </title>
+    <title><?php echo $page_service->get_page_title($current_page_id) . " - " . SiteInfo::SITE_NAME; ?> </title>
   </head>
   <body class="d-flex flex-column h-100">
     <script src="<?php echo $url_service->get_js_url("jquery.min.js"); ?>"
@@ -42,10 +39,10 @@
           </button>
           <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <a class="nav-item nav-link <?php if ($current_page_id === PageType::Home->value){ echo "active"; }?>" href="/"><?php echo $page_service->get_page_title(PageType::Home); ?> </a>
-                <a class="nav-item nav-link <?php if ($current_page_id === PageType::Project->value){ echo "active"; }?>" href="/projects"><?php echo $page_service->get_page_title(PageType::Project); ?></a>
-                <a class="nav-item nav-link <?php if ($current_page_id === PageType::About->value){ echo "active"; }?>" href="/about"><?php echo $page_service->get_page_title(PageType::About); ?></a>
-                <a class="nav-item nav-link <?php if ($current_page_id === PageType::Contact->value){ echo "active"; }?>" href="/contact"><?php echo $page_service->get_page_title(PageType::Contact); ?></a>
+                <a class="nav-item nav-link <?php if ($current_page_id === PageType::Home){ echo "active"; }?>" href="/"><?php echo $page_service->get_page_title(PageType::Home); ?> </a>
+                <a class="nav-item nav-link <?php if ($current_page_id === PageType::Project){ echo "active"; }?>" href="/projects"><?php echo $page_service->get_page_title(PageType::Project); ?></a>
+                <a class="nav-item nav-link <?php if ($current_page_id === PageType::About){ echo "active"; }?>" href="/about"><?php echo $page_service->get_page_title(PageType::About); ?></a>
+                <a class="nav-item nav-link <?php if ($current_page_id === PageType::Contact){ echo "active"; }?>" href="/contact"><?php echo $page_service->get_page_title(PageType::Contact); ?></a>
             </ul>
           </div>
         </div>
