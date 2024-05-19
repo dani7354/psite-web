@@ -9,7 +9,6 @@
     $page_service = DiContainer::get(PageServiceInterface::class);
     $url_service = DiContainer::get(UrlServiceInterface::class);
 
-    $current_page_id = PageType::Project->value;
 ?>
 
 <?php include_once HTML_ELEMENTS_PATH . "/header.php"; ?>

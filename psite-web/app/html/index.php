@@ -6,8 +6,6 @@
     use App\Service\Interface\ProjectServiceInterface;
     use App\Model\PageType;
 
-    $current_page_id = PageType::Home->value;
-
     $page_service = DiContainer::get(PageServiceInterface::class);
     $project_service = DiContainer::get(ProjectServiceInterface::class);
 

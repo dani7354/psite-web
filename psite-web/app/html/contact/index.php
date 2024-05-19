@@ -13,8 +13,6 @@
     use App\Model\PageType;
     use App\Shared\SiteInfo;
 
-    $current_page_id = PageType::Contact->value;
-
     $page_service = DiContainer::get(PageServiceInterface::class);
     $message_service = DiContainer::get(MessageServiceInterface::class);
     $csrf_token_service = DiContainer::get(CsrfTokenServiceInterface::class);

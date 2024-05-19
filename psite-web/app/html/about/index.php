@@ -6,8 +6,6 @@
   use App\Service\Interface\PageServiceInterface;
   use App\Service\Interface\UrlServiceInterface;
 
-  $current_page_id = PageType::About->value;
-
   $url_service = DiContainer::get(App\Service\Interface\UrlServiceInterface::class);
   $page_service = DiContainer::get(App\Service\Interface\PageServiceInterface::class);
 ?>
