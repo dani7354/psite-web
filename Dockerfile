@@ -26,6 +26,7 @@ RUN apt update && apt install -y \
     php${php_version}-mbstring \
     php${php_version}-mysql \
     php${php_version}-xml \
+    php${php_version}-zip \
     && apt clean
 
 # Add website files
