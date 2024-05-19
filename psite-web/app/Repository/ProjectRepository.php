@@ -1,11 +1,12 @@
 <?php
-    namespace App\Db;
+    namespace App\Repository;
 
+    use PDO;
     use App\Db\MySqlPdoConnector;
     use App\Model\Project\Project;
-    use PDO;
+    use App\Repository\Interface\ProjectRepositoryInterface;
 
-    class ProjectDb
+    class ProjectRepository implements ProjectRepositoryInterface
     {
         private $db_connector;
 

@@ -1,11 +1,12 @@
 <?php
-    namespace App\Db;
+    namespace App\Repository;
 
-    use App\Db\MySqlPdoConnector;
     use PDO;
+    use App\Db\MySqlPdoConnector;
     use App\Model\Message;
+    use App\Repository\Interface\MessageRepositoryInterface;
 
-    class MessageDb
+    class MessageRepostitory implements MessageRepositoryInterface
     {
         private readonly MySqlPdoConnector $db_connector;
 
@@ -34,7 +35,7 @@
             $stmt->bindParam(4, $subject, PDO::PARAM_STR, 255);
             $stmt->bindParam(5, $body, PDO::PARAM_STR, 1200);
             $stmt->bindParam(6, $date_created, PDO::PARAM_STR);
-            
+
             $stmt->execute();
             $this->db_connector->close_connection($connection);
 
