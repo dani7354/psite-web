@@ -11,11 +11,13 @@
             return [
                 ["/", PageType::Home],
                 ["", PageType::Home],
+                ["/?/project", PageType::Home],
+                ["asdasd1234", PageType::Home], // Home is default
                 ["/project", PageType::Project],
                 ["/contact", PageType::Contact],
+                ["/contact/about", PageType::Contact],
                 ["/about", PageType::About],
                 ["/about/project", PageType::About],
-                ["/?/project", PageType::Home],
             ];
         }
 
