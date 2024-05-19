@@ -5,14 +5,15 @@
     use App\Db\MySqlPdoConnector;
     use App\Model\Message;
     use App\Repository\Interface\MessageRepositoryInterface;
+    use App\Repository\Interface\DatabaseConnectorInterface;
 
-    class MessageRepostitory implements MessageRepositoryInterface
+    class MessageRepository implements MessageRepositoryInterface
     {
-        private readonly MySqlPdoConnector $db_connector;
+        private readonly DatabaseConnectorInterface $db_connector;
 
-        public function __construct(string $host, string $port, string $db_name, string $user, string $password)
+        public function __construct(DatabaseConnectorInterface $db_connector)
         {
-            $this->db_connector = new MySqlPdoConnector($host, $port, $db_name, $user, $password);
+            $this->db_connector = $db_connector;
         }
 
         public function create(Message $message) : bool

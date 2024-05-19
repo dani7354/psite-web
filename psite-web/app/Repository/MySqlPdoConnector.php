@@ -21,7 +21,7 @@
             return new PDO($dsn, $this->user, $this->password);
         }
 
-        public function close_connection(&$db)
+        public function close_connection(&$db) : void
         {
             $db = null;
         }

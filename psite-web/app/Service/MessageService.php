@@ -1,7 +1,7 @@
 <?php
     namespace App\Service;
 
-    use App\Db\MessageDb;
+    use App\Repository\Interface\MessageRepositoryInterface;
     use App\Model\Message;
     use App\Helper\Validation\InputValidator;
     use App\Helper\CaptchaHelper;
@@ -9,11 +9,11 @@
 
     class MessageService implements MessageServiceInterface
     {
-        private readonly MessageDb $message_db;
+        private readonly MessageRepositoryInterface $message_repository;
 
-        public function __construct(MessageDb $message_db)
+        public function __construct(MessageRepositoryInterface $message_repository)
         {
-            $this->message_db = $message_db;
+            $this->message_repository = $message_repository;
         }
 
         public static function validate(Message $message) : array
@@ -53,6 +53,6 @@
 
         public function create(Message $message) : bool
         {
-            return $this->message_db->create($message);
+            return $this->message_repository->create($message);
         }
     }

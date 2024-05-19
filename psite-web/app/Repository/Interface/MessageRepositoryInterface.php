@@ -1,5 +1,7 @@
 <?php
-    namespace App\Repository\Interfaces;
+    namespace App\Repository\Interface;
+
+    use App\Model\Message;
 
     interface MessageRepositoryInterface
     {

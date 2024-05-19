@@ -3,7 +3,7 @@
 
     use App\Service\Interface\CsrfTokenServiceInterface;
 
-    class CsrfTokenService extends CsrfTokenServiceInterface
+    class CsrfTokenService implements CsrfTokenServiceInterface
     {
         private const TOKEN = "token";
         private const TOKEN_LENTGH = 32;

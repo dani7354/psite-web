@@ -2,22 +2,23 @@
     session_start();
     require_once "../../initialize.php";
 
-    use App\Service\PageService;
-    use App\Service\UrlService;
-    use App\Service\CaptchaService;
-    use App\Service\CsrfTokenService;
-    use App\Service\MessageService;
+    use App\DiContainer;
+    use App\Service\Interface\MessageServiceInterface;
+    use App\Service\Interface\PageServiceInterface;
+    use App\Service\Interface\CsrfTokenServiceInterface;
+    use App\Service\Interface\CaptchaServiceInterface;
     use App\Helper\Security\ErrorHandler;
     use App\Helper\Validation\MessageInputValidator;
-    use App\Db\MessageDb;
     use App\Model\Message;
     use App\Model\PageType;
     use App\Shared\SiteInfo;
-    use App\Shared\DatabaseInfo;
 
     $current_page_id = PageType::Contact->value;
 
-    $page_service = new PageService();
+    $page_service = DiContainer::get(PageServiceInterface::class);
+    $message_service = DiContainer::get(MessageServiceInterface::class);
+    $csrf_token_service = DiContainer::get(CsrfTokenServiceInterface::class);
+    $captcha_service = DiContainer::get(CaptchaServiceInterface::class);
 
     $name = "";
     $email = "";
@@ -31,11 +32,11 @@
         try
         {
             $errors = [];
-            if (!CsrfTokenService::verify_token($_POST["token"]))
+            if (!$csrf_token_service::verify_token($_POST["token"]))
             {
                 $errors[] = "Ugyldig CSRF-token";
             }
-            if (!CaptchaService::verify_captcha($_POST["captcha"]))
+            if (!$captcha_service::verify_captcha($_POST["captcha"]))
             {
                 $errors[] = "Ugyldig CAPTCHA";
             }
@@ -51,14 +52,6 @@
                 $remote_ip,
                 $subject_stripped,
                 $message_body_stripped);
-
-            $message_service = new MessageService(
-                new MessageDb(
-                    DatabaseInfo::get_host(),
-                    DatabaseInfo::get_port(),
-                    DatabaseInfo::get_name(),
-                    DatabaseInfo::get_user(),
-                    DatabaseInfo::get_password()));
 
             $message_errors = $message_service->validate($new_message);
             $errors = array_merge($errors, $message_errors);
@@ -78,8 +71,8 @@
         $message = isset($_POST["message"]) && !$success ? htmlspecialchars($_POST["message"]) : "";
     }
 
-    $token = CsrfTokenService::create_new_token();
-    $captcha_image = CaptchaService::get_image();
+    $token = $csrf_token_service::create_new_token();
+    $captcha_image = $captcha_service::get_image();
 ?>
 
 <?php include_once HTML_ELEMENTS_PATH . "/header.php"; ?>
@@ -116,7 +109,7 @@
                         <input name="name" type="text" class="form-control" placeholder="Navn" value="<?php echo $name; ?>" required>
                     </div>
                 </div>
-                
+
                 <p>
                 <div class="form-row">
                     <div class="col">

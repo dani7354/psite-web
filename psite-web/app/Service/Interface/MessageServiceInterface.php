@@ -1,7 +1,9 @@
 <?php
     namespace App\Service\Interface;
 
-    interface MesssageServiceInterface
+    use App\Model\Message;
+
+    interface MessageServiceInterface
     {
         public static function validate(Message $message) : array;
         public function create(Message $message) : bool;

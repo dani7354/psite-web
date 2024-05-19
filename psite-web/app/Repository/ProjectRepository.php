@@ -2,17 +2,17 @@
     namespace App\Repository;
 
     use PDO;
-    use App\Db\MySqlPdoConnector;
     use App\Model\Project\Project;
     use App\Repository\Interface\ProjectRepositoryInterface;
+    use App\Repository\Interface\DatabaseConnectorInterface;
 
     class ProjectRepository implements ProjectRepositoryInterface
     {
-        private $db_connector;
+        private readonly DatabaseConnectorInterface $db_connector;
 
-        public function __construct(string $host, string $port, string $db_name, string $user, string $password)
+        public function __construct(DatabaseConnectorInterface $db_connector)
         {
-            $this->db_connector = new MySqlPdoConnector($host, $port, $db_name, $user, $password);
+            $this->db_connector = $db_connector;
         }
 
         public function all() : array
