@@ -31,11 +31,11 @@
             {
                 $page_type = PageType::Project;
             }
-            else if (str_starts_with($request_uri, "/contact") !== false)
+            elseif (str_starts_with($request_uri, "/contact") !== false)
             {
                 $page_type = PageType::Contact;
             }
-            else if (str_starts_with($request_uri, "/about") !== false)
+            elseif (str_starts_with($request_uri, "/about") !== false)
             {
                 $page_type = PageType::About;
             }
