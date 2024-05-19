@@ -1,17 +1,19 @@
 <?php
-    namespace App\Db;
+    namespace App\Repository;
 
-    use App\Db\MySqlPdoConnector;
     use PDO;
+    use App\Db\MySqlPdoConnector;
     use App\Model\Message;
+    use App\Repository\Interface\MessageRepositoryInterface;
+    use App\Repository\Interface\DatabaseConnectorInterface;
 
-    class MessageDb
+    class MessageRepository implements MessageRepositoryInterface
     {
-        private readonly MySqlPdoConnector $db_connector;
+        private readonly DatabaseConnectorInterface $db_connector;
 
-        public function __construct(string $host, string $port, string $db_name, string $user, string $password)
+        public function __construct(DatabaseConnectorInterface $db_connector)
         {
-            $this->db_connector = new MySqlPdoConnector($host, $port, $db_name, $user, $password);
+            $this->db_connector = $db_connector;
         }
 
         public function create(Message $message) : bool
@@ -34,7 +36,7 @@
             $stmt->bindParam(4, $subject, PDO::PARAM_STR, 255);
             $stmt->bindParam(5, $body, PDO::PARAM_STR, 1200);
             $stmt->bindParam(6, $date_created, PDO::PARAM_STR);
-            
+
             $stmt->execute();
             $this->db_connector->close_connection($connection);
 

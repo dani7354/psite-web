@@ -1,23 +1,13 @@
 <?php
     require_once "../initialize.php";
 
+    use App\DiContainer;
+    use App\Service\Interface\PageServiceInterface;
+    use App\Service\Interface\ProjectServiceInterface;
     use App\Model\PageType;
-    use App\Shared\DatabaseInfo;
-    use App\Model\Project\Project;
-    use App\Db\ProjectDb;
-    use App\Service\ProjectService;
-    use App\Service\PageService;
 
-    $current_page_id = PageType::Home->value;
-
-    $page_service = new PageService();
-    $project_service = new ProjectService(
-        new ProjectDb(
-            DatabaseInfo::get_host(),
-            DatabaseInfo::get_port(),
-            DatabaseInfo::get_name(),
-            DatabaseInfo::get_user(),
-            DatabaseInfo::get_password()));
+    $page_service = DiContainer::get(PageServiceInterface::class);
+    $project_service = DiContainer::get(ProjectServiceInterface::class);
 
     $latest_updated_projects = $project_service->get_last_updated_projects(5);
 ?>

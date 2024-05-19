@@ -1,36 +1,14 @@
 <?php
     require_once "../../initialize.php";
 
-    use App\Helper\Security\ErrorHandler;
-    use App\Service\UrlService;
-    use App\Service\ProjectService;
-    use App\Service\PageService;
-    use App\Db\ProjectDb;
-    use App\Model\Project\Project;
+    use App\DiContainer;
+    use App\Service\Interface\PageServiceInterface;
+    use App\Service\Interface\UrlServiceInterface;
     use App\Model\PageType;
-    use App\Shared\DatabaseInfo;
 
-    $page_service = new PageService();
-    $url_service = new UrlService();
+    $page_service = DiContainer::get(PageServiceInterface::class);
+    $url_service = DiContainer::get(UrlServiceInterface::class);
 
-    $current_page_id = PageType::Project->value;
-
-    try
-    {
-        $project_db = new ProjectDb(
-            DatabaseInfo::get_host(),
-            DatabaseInfo::get_port(),
-            DatabaseInfo::get_name(),
-            DatabaseInfo::get_user(),
-            DatabaseInfo::get_password());
-
-        $project_service = new ProjectService($project_db);
-        $projects = $project_db->all();
-    }
-    catch (Exception $exception)
-    {
-        ErrorHandler::handle_exception($exception, 500);
-    }
 ?>
 
 <?php include_once HTML_ELEMENTS_PATH . "/header.php"; ?>
