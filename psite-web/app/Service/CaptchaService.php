@@ -1,7 +1,9 @@
 <?php
     namespace App\Service;
 
-    class CaptchaService
+    use App\Service\Interface\CaptchaServiceInterface;
+
+    class CaptchaService implements CaptchaServiceInterface
     {
         private const LENGTH = 7;
         private const CHARS = "abcdefghijklmnopqrstuvwxyz1234567890";
@@ -30,7 +32,17 @@
             return "data:image/png;base64," . $image_b64;
         }
 
-        public static function get_chars() : string
+        public static function verify_captcha(string $input) : bool
+        {
+            if (!isset($_SESSION[self::SESSION_VARIABLE]))
+            {
+                return false;
+            }
+
+            return hash_equals($_SESSION[self::SESSION_VARIABLE], $input);
+        }
+
+        private static function get_chars() : string
         {
             $captcha_chars = "";
 
@@ -43,16 +55,6 @@
             self::set_captcha_for_session($captcha_chars);
 
             return $captcha_chars;
-        }
-
-        public static function verify_captcha($input) : bool
-        {
-            if (!isset($_SESSION[self::SESSION_VARIABLE]))
-            {
-                return false;
-            }
-
-            return hash_equals($_SESSION[self::SESSION_VARIABLE], $input);
         }
 
         private static function set_captcha_for_session($captcha)

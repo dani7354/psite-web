@@ -1,9 +1,10 @@
 <?php
     namespace App\Service;
 
+    use App\Service\Interface\PageServiceInterface;
     use App\Model\PageType;
 
-    class PageService
+    class PageService implements PageServiceInterface
     {
         private readonly array $pages;
 

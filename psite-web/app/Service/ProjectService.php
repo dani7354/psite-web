@@ -2,8 +2,9 @@
     namespace App\Service;
 
     use App\Db\ProjectDb;
+    use App\Service\Interface\ProjectServiceInterface;
 
-    class ProjectService
+    class ProjectService implements ProjectServiceInterface
     {
         private readonly ProjectDb $project_db;
 

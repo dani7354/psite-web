@@ -2,7 +2,9 @@
 
     namespace App\Service;
 
-    class UrlService
+    use App\Service\Interface\UrlServiceInterface;
+
+    class UrlService implements UrlServiceInterface
     {
         private readonly string $assets_path;
         private readonly string $css_base_url;

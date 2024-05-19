@@ -5,8 +5,9 @@
     use App\Model\Message;
     use App\Helper\Validation\InputValidator;
     use App\Helper\CaptchaHelper;
+    use App\Service\Interface\MessageServiceInterface;
 
-    class MessageService
+    class MessageService implements MessageServiceInterface
     {
         private readonly MessageDb $message_db;
 
