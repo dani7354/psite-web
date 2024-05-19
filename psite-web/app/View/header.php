@@ -1,13 +1,13 @@
 <?php
+    use App\DiContainer;
+    use App\Service\Interface\PageServiceInterface;
+    use App\Service\Interface\UrlServiceInterface;
     use App\Model\PageType;
     use App\Helper\Security\ErrorHandler;
-    use App\Service\PageService;
-    use App\Service\UrlService;
     use App\Shared\SiteInfo;
 
-
-    $page_service = new PageService();
-    $url_service = new UrlService();
+    $page_service = DiContainer::get(PageServiceInterface::class);
+    $url_service = DiContainer::get(UrlServiceInterface::class);
 
     if (!isset($current_page_id))
     {

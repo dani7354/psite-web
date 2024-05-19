@@ -1,22 +1,15 @@
 <?php
   require_once "../../initialize.php";
 
+  use App\DiContainer;
   use App\Model\PageType;
-  use App\Service\PageService;
   use App\Service\Interface\PageServiceInterface;
   use App\Service\Interface\UrlServiceInterface;
-  use App\Service\Interface\MessageServiceInterface;
-  use App\Service\MessageService;
-  use App\Service\UrlService;
-  use App\DiContainer;
-
-  //$page_service = new PageService();
-  $url_service = new UrlService();
 
   $current_page_id = PageType::About->value;
 
   $url_service = DiContainer::get(App\Service\Interface\UrlServiceInterface::class);
-  $message_service = DiContainer::get(App\Service\Interface\MessageServiceInterface::class);
+  $page_service = DiContainer::get(App\Service\Interface\PageServiceInterface::class);
 ?>
 
 <?php include_once HTML_ELEMENTS_PATH . "/header.php"; ?>
