@@ -44,7 +44,7 @@ RUN mv composer.phar /usr/local/sbin/composer
 RUN rm composer-setup.php
 
 WORKDIR $wwwroot
-RUN composer install --no-dev
+RUN composer install --no-dev --no-plugins --no-scripts
 
 # Copy apache configs
 COPY ./psite-web/apache/apache2.conf /etc/apache2/apache2.conf
