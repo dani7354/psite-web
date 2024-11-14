@@ -1,7 +1,5 @@
 @import "../../node_modules/bootstrap/scss/functions";
 
-
-
 $primary: #00ff00;
 $body-color: #00ff00;
 $body-bg: #000000;
@@ -41,6 +39,7 @@ $active-color: #00c400;
 }
 
 .navbar-nav .nav-link.active {
+    font-size: 1.4rem;
     color: $active-color;
     font-weight: bold;
 }

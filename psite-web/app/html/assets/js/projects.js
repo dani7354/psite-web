@@ -18,8 +18,9 @@ function insertProject(project) {
     cardDiv.append(cardBodyDiv);
 
     let title = $("<h5></h5>").addClass("card-title");
-    let titleLink = $("<a></a>").addClass("link-secondary").attr("href", project.url).text(project.title);
-    let iconLink = $("<i></i>").addClass("fa fa-github fa-lg fa-github-project");
+    let titleLink = $("<a></a>").addClass("link-primary").attr("href", project.url).text(project.title);
+    let iconLink = $("<a></a>").addClass("link-primary").attr("href", project.url);
+    iconLink.append($("<i></i>").addClass("fa fa-github fa-lg fa-github-project"));
     title.append(titleLink);
     title.append(iconLink);
     cardBodyDiv.append(title);

@@ -200,6 +200,7 @@
 }
 
 .navbar-nav .nav-link.active {
+  font-size: 1.4rem;
   color: #00c400;
   font-weight: bold;
 }
