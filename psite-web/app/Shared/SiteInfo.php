@@ -3,7 +3,7 @@
 
     class SiteInfo
     {
-        const SITE_NAME = "Stuhrs.dk";
+        const SITE_NAME = "Daniel Stuhr Petersen";
         const DOMAIN = "www.stuhrs.dk";
         const FULL_NAME = "Daniel Stuhr Petersen";
         const EMAIL = "d@stuhrs.dk";

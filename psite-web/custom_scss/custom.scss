@@ -1,0 +1,50 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+
+
+$primary: #00ff00;
+$body-color: #00ff00;
+$body-bg: #000000;
+
+$active-color: #00c400;
+
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+
+
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+
+.btn {
+  color: $btn-color;
+  background-color: $body-bg;
+  border-color: $primary;
+}
+
+.form-control {
+    border-color: $primary;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+.nav-link {
+    font-size: 1.3rem;
+}
+
+.navbar-nav .nav-link.active {
+    color: $active-color;
+    font-weight: bold;
+}
+
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/helpers";
+@import "../../node_modules/bootstrap/scss/utilities/api";
