@@ -31,6 +31,11 @@ $active-color: #00c400;
     font-size: 2rem;
 }
 
+.navbar-brand:hover {
+    font-size: 2.1rem;
+    color: $active-color;
+}
+
 .nav-link {
     font-size: 1.3rem;
 }
@@ -38,6 +43,18 @@ $active-color: #00c400;
 .navbar-nav .nav-link.active {
     color: $active-color;
     font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    font-size: 1.4rem;
+    color: $active-color;
+    font-weight: bold;
+}
+
+.btn-outline-primary:hover {
+    background-color: $primary;
+    border-color: $primary;
+    color: $body-bg;
 }
 
 @import "../../node_modules/bootstrap/scss/utilities";

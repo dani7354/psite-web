@@ -21,7 +21,7 @@
                 Herunder finder du et lille udvalg af mine programmeringsprojekter.
             </p>
             <div id="project-container" class="row row-cols-1 row-cols-md-3 g-3"></div>
-            <button id="next-button" type="button" class="btn btn-primary">Vis flere</button>
+            <button id="next-button" type="button" class="btn btn-outline-primary">Vis flere</button>
             <script src="<?php echo $url_service->get_js_url("projects.js"); ?>"
             integrity="<?php $url_service->get_integrity_attribute("projects.js"); ?>"></script>
         </div>
