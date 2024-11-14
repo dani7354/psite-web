@@ -176,6 +176,10 @@
   --bs-form-invalid-border-color: rgb(234, 133.8, 143.4);
 }
 
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
 .btn {
   color: var(--bs-body-color);
   background-color: #000000;
@@ -188,6 +192,7 @@
 
 .navbar-brand {
   font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .navbar-brand:hover {
