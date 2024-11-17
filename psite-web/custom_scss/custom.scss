@@ -7,7 +7,6 @@ $font-family-sans-serif: "Inconsolata", serif;
 
 $active-color: #00c400;
 
-
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/variables-dark";
 
@@ -16,7 +15,7 @@ $active-color: #00c400;
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/root";
 
-
+// https://fonts.google.com/specimen/Inconsolata
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 200 to 900
 
@@ -28,6 +27,11 @@ $active-color: #00c400;
     font-variation-settings:
       "wdth" 100;
   }
+
+body {
+    color: $body-color;
+    background-color: $body-bg;
+}
 
 .btn {
   color: $btn-color;
@@ -42,6 +46,7 @@ $active-color: #00c400;
 .navbar-brand {
     font-size: 2rem;
     font-family: "Inconsolata", serif;
+    color: $body-color;
 }
 
 .navbar-brand:hover {
@@ -51,6 +56,7 @@ $active-color: #00c400;
 
 .nav-link {
     font-size: 1.3rem;
+    color: $body-color;
 }
 
 .navbar-nav .nav-link.active {

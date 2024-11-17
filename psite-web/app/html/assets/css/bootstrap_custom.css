@@ -184,6 +184,11 @@
   font-variation-settings: "wdth" 100;
 }
 
+body {
+  color: #00ff00;
+  background-color: #000000;
+}
+
 .btn {
   color: var(--bs-body-color);
   background-color: #000000;
@@ -197,6 +202,7 @@
 .navbar-brand {
   font-size: 2rem;
   font-family: "Inconsolata", serif;
+  color: #00ff00;
 }
 
 .navbar-brand:hover {
@@ -206,6 +212,7 @@
 
 .nav-link {
   font-size: 1.3rem;
+  color: #00ff00;
 }
 
 .navbar-nav .nav-link.active {
