@@ -11,10 +11,9 @@
         public function __construct()
         {
             $this->pages = [
-                PageType::Home->value => "Forside",
-                PageType::Project->value => "Projekter",
-                PageType::Contact->value => "Kontakt",
-                PageType::About->value => "Om"
+                PageType::Project->value => "PROJEKTER",
+                PageType::Contact->value => "KONTAKT",
+                PageType::About->value => "OM"
             ];
         }
 
@@ -25,13 +24,8 @@
 
         public function get_page_type_for_current(string $request_uri) : PageType
         {
-            $page_type = PageType::Home;
-
-            if (str_starts_with($request_uri, "/project") !== false)
-            {
-                $page_type = PageType::Project;
-            }
-            elseif (str_starts_with($request_uri, "/contact") !== false)
+            $page_type = PageType::Project;
+            if (str_starts_with($request_uri, "/contact") !== false)
             {
                 $page_type = PageType::Contact;
             }

@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="<?php echo $url_service->get_css_url("bootstrap.css"); ?>">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="<?php echo $url_service->get_css_url("font-awesome.css"); ?>">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php echo $url_service->get_css_url("style.css"); ?>">
     <link rel="stylesheet" href="<?php echo $url_service->get_css_url("bootstrap_custom.css"); ?>">
@@ -40,8 +44,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="navbar-nav col-lg-6 justify-content-lg-center">
-                <a class="nav-item nav-link <?php if ($current_page_id === PageType::Home){ echo "active"; }?>" href="/"><?php echo $page_service->get_page_title(PageType::Home); ?> </a>
-                <a class="nav-item nav-link <?php if ($current_page_id === PageType::Project){ echo "active"; }?>" href="/projects"><?php echo $page_service->get_page_title(PageType::Project); ?></a>
+                <a class="nav-item nav-link <?php if ($current_page_id === PageType::Project){ echo "active"; }?>" href="/"><?php echo $page_service->get_page_title(PageType::Project); ?></a>
                 <a class="nav-item nav-link <?php if ($current_page_id === PageType::About){ echo "active"; }?>" href="/about"><?php echo $page_service->get_page_title(PageType::About); ?></a>
                 <a class="nav-item nav-link <?php if ($current_page_id === PageType::Contact){ echo "active"; }?>" href="/contact"><?php echo $page_service->get_page_title(PageType::Contact); ?></a>
             </ul>

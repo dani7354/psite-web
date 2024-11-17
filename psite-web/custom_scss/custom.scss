@@ -3,6 +3,7 @@
 $primary: #00ff00;
 $body-color: #00ff00;
 $body-bg: #000000;
+$font-family-sans-serif: "Inconsolata", serif;
 
 $active-color: #00c400;
 
@@ -14,6 +15,19 @@ $active-color: #00c400;
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/root";
+
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 900
+
+.inconsolata-text {
+    font-family: "Inconsolata", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
 
 .btn {
   color: $btn-color;
@@ -27,7 +41,7 @@ $active-color: #00c400;
 
 .navbar-brand {
     font-size: 2rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Inconsolata", serif;
 }
 
 .navbar-brand:hover {
@@ -55,6 +69,10 @@ $active-color: #00c400;
     background-color: $primary;
     border-color: $primary;
     color: $body-bg;
+}
+
+.card {
+    border-color: $primary;
 }
 
 @import "../../node_modules/bootstrap/scss/utilities";
