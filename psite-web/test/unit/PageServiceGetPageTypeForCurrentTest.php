@@ -9,10 +9,9 @@
         public static function inputData() : array
         {
             return [
-                ["/", PageType::Home],
-                ["", PageType::Home],
-                ["/?/project", PageType::Home],
-                ["asdasd1234", PageType::Home], // Home is default
+                ["/", PageType::Project],
+                ["", PageType::Project],
+                ["asdasd1234", PageType::Project], // Home is default
                 ["/project", PageType::Project],
                 ["/contact", PageType::Contact],
                 ["/contact/about", PageType::Contact],

@@ -4,11 +4,11 @@
 ?>
 <br/>
 </main>
-    <footer class="footer mt-auto py-3 bg-dark">
+    <footer class="footer mt-auto py-3">
       <div class="container">
         <div class="d-flex align-items-center">
           <div class="p2 flex-grow-1">
-            <span class="text-light">
+            <span class="">
               &copy; <?php echo date('Y') . " " . SiteInfo::FULL_NAME; ?>
             </span>
           </div>

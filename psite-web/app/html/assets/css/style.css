@@ -1,6 +1,9 @@
+/* General CSS */
+
+
 /* CSS for Font Awesome SoMe icons in footer */
 .fa {
-    color: white;
+    color: lime;
     font-size: 24px;
     padding: 10px;
     text-align: center;
@@ -8,26 +11,15 @@
 }
 
 .fa-github-project {
-    font-size: 24px;
-    color: black;
-}
-
-.fa-github-frontpage {
-    font-size: 18px;
-    color: black;
+    font-size: 32px;
+    color: lime;
 }
 
 .fa-github-profile {
     font-size: 24px;
-    color: white;
+    color: lime;
 }
 
 .fa:hover {
     opacity: 0.7;
-}
-
-.card-img-top {
-    width: 100%;
-    height: 15vw;
-    object-fit: cover;
 }
