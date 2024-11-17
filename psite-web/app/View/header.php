@@ -44,9 +44,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="navbar-nav col-lg-6 justify-content-lg-center">
-                <a class="nav-item nav-link <?php if ($current_page_id === PageType::Project){ echo "active"; }?>" href="/"><?php echo $page_service->get_page_title(PageType::Project); ?></a>
-                <a class="nav-item nav-link <?php if ($current_page_id === PageType::About){ echo "active"; }?>" href="/about"><?php echo $page_service->get_page_title(PageType::About); ?></a>
-                <a class="nav-item nav-link <?php if ($current_page_id === PageType::Contact){ echo "active"; }?>" href="/contact"><?php echo $page_service->get_page_title(PageType::Contact); ?></a>
+                <a class="nav-item nav-link <?php if ($current_page_id === PageType::Project){ echo "active"; }?>" href="/"><?php echo $page_service->get_page_title_for_nav(PageType::Project); ?></a>
+                <a class="nav-item nav-link <?php if ($current_page_id === PageType::About){ echo "active"; }?>" href="/about"><?php echo $page_service->get_page_title_for_nav(PageType::About); ?></a>
+                <a class="nav-item nav-link <?php if ($current_page_id === PageType::Contact){ echo "active"; }?>" href="/contact"><?php echo $page_service->get_page_title_for_nav(PageType::Contact); ?></a>
             </ul>
           </div>
         </div>
