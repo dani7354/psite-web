@@ -23,7 +23,7 @@
             <div id="project-container" class="row row-cols-1 row-cols-md-3 g-3"></div>
             <button id="next-button" type="button" class="btn btn-outline-primary">Vis flere</button>
             <script src="<?php echo $url_service->get_js_url("projects.js"); ?>"
-            integrity=""></script>
+            integrity="<?php echo $url_service->get_integrity_attribute("project.js"); ?>"></script>
         </div>
     </div>
 </div>
