@@ -13,3 +13,5 @@ This repository contains my personal website written in PHP.
 
 
 ## Build custom Bootstrap CSS with Sass
+1. Make sure that Sass is installed.
+2. `$ sass psite-web/custom_scss/custom.scss:psite-web/app/html/assets/css/bootstrap_custom.css`
