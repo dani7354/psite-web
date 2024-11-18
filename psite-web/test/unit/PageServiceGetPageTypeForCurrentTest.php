@@ -10,9 +10,7 @@
         {
             return [
                 ["/", PageType::Project],
-                ["", PageType::Project],
-                ["asdasd1234", PageType::Project], // Home is default
-                ["/project", PageType::Project],
+                ["asdasd1234", PageType::Error], // Error is default
                 ["/contact", PageType::Contact],
                 ["/contact/about", PageType::Contact],
                 ["/about", PageType::About],
