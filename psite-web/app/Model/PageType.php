@@ -6,4 +6,5 @@
         case Project = 2;
         case Contact = 3;
         case About = 4;
+        case Error = 5;
     }
