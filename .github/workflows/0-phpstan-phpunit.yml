@@ -28,7 +28,7 @@ jobs:
         env:
           COMPOSER: "composer.json"
         with:
-          php_version: "8.3"
+          php_version: "8.4"
           args: "--ignore-platform-reqs --optimize-autoloader"
           working_dir: "psite-web/app"
 
@@ -41,6 +41,6 @@ jobs:
         with:
           version: "11.1"
           memory_limit: "1024M"
-          php_version: "8.3"
+          php_version: "8.4"
           bootstrap: "psite-web/app/initialize.php"
           configuration: "phpunit.xml"
