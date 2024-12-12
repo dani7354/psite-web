@@ -11,7 +11,7 @@ RUN apt update && apt install -y \
 
 # Install PHP-FPM and modules
 ARG debian_release
-ARG php_version=8.3
+ARG php_version=8.4
 
 RUN wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add -
 RUN echo "deb https://packages.sury.org/php/ ${debian_release} main" | tee /etc/apt/sources.list.d/php.list
