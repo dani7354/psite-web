@@ -6,8 +6,8 @@
   use App\Service\Interface\PageServiceInterface;
   use App\Service\Interface\UrlServiceInterface;
 
-  $url_service = DiContainer::get(App\Service\Interface\UrlServiceInterface::class);
-  $page_service = DiContainer::get(App\Service\Interface\PageServiceInterface::class);
+  $url_service = DiContainer::get(UrlServiceInterface::class);
+  $page_service = DiContainer::get(PageServiceInterface::class);
 ?>
 
 <?php include_once HTML_ELEMENTS_PATH . "/header.php"; ?>
@@ -21,6 +21,7 @@
             <p><strong>Daniel Stuhr Petersen</strong></p>
             <p>
                 <strong>Uddannelse</strong>
+                Master i it, Softwarekonstruktion, Aalborg Universitet, 2025-
                 <br>
                 Professionsbachelor i it-sikkerhed, Københavns Erhvervsakademi, 2020-2021
                 <br>
@@ -29,7 +30,7 @@
             <p>
                 <strong>Beskæftigelse</strong>
                 <br>
-                It-medarbejder, Forsvaret, 2023-
+                Softwareudvikler, Forsvaret, 2023-
                 <br>
                 Softwareudvikler, Hesehus A/S, 2021-2023
                 <br>
