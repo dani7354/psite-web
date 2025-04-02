@@ -21,7 +21,7 @@
             <p><strong>Daniel Stuhr Petersen</strong></p>
             <p>
                 <strong>Uddannelse</strong>
-                Master i it, Softwarekonstruktion, Aalborg Universitet, 2025-
+                Master i it, softwarekonstruktion, Aalborg Universitet, 2025-
                 <br>
                 Professionsbachelor i it-sikkerhed, Københavns Erhvervsakademi, 2020-2021
                 <br>
