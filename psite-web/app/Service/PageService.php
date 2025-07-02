@@ -39,7 +39,7 @@
             {
                 $page_type = PageType::About;
             }
-            elseif ($request_uri === "/")
+            elseif (str_starts_with($request_uri, "/index.php") || $request_uri === "/")
             {
                 $page_type = PageType::Project;
             }
