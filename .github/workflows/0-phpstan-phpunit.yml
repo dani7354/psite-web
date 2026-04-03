@@ -15,16 +15,16 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Cache Composer dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
         with:
           path: "psite-web/app/vendor"
           key: composer-${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
 
       - name: Composer Init
-        uses: php-actions/composer@v6
+        uses: php-actions/composer@8a65f0d3c6a1d17ca4800491a40b5756a4c164f3 # v6.1.2
         env:
           COMPOSER: "composer.json"
         with:
@@ -37,7 +37,7 @@ jobs:
           ./psite-web/app/vendor/bin/phpstan analyse --configuration=psite-web/app/phpstan.neon --memory-limit=1024M
 
       - name: PHPUnit Tests
-        uses: php-actions/phpunit@v4
+        uses: php-actions/phpunit@1789d1964b1bfda259b1cb42a72b65299c2cae35 # v4.0.0
         with:
           version: "11.1"
           memory_limit: "1024M"
