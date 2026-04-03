@@ -21,9 +21,9 @@
 
             $this->asset_integrity_attributes = [
                 "project.js" => "sha256-2yU+ZElWKUczIaJGgDfY1XrVji+bVg39/nezYfKzgtQ= sha384-cjxoERXs4DmHA0/E4TYzM9YbeaUKFDg2CQxx1HLZA00XtP9xUdXZFfqKm5/m6hUu sha512-rExxCKfPmywGDZY3J2H63v4qZDOtL8tLfkAZjRw/b5LQQCZcLjF2jfpWwZ9hZ1B3igdO/D3X42KIK972KFso8w==",
-                "bootstrap.bundle.js" => "sha256-tQ9c3dc1t0j9EV2Itwqx1ZK0qjrLayj0+l/lSEgU5ZM= sha384-fbuTCqrjZOrmpZbs3YVaKKzmtq9njHJsP1QQekiLtGTdTaVvQNmjGckvE0GKntvc sha512-anzvBXUS0bYdV5587BxY34tdgVGuc5jUUGIi0WopbvhzpLVLUV7ozejVnDOqdjKm3qlOf7W0II++oq9FrApXww==",
+                "bootstrap.bundle.js" => "sha256-aVZjRM9XIr5RrLyQ/bJsJOsBzBwVP3OLFrL6h8zTtRA= sha384-DXQlBty/lBVDkqL4VKQIlPyuBHCumaxsqVbwsQWRGh0NFBAkAAnOo7qlcR2x+hP9 sha512-RIzT5kuaKdKfx6gxL8ZuzemSJbSpEGz0eLGROuOSaovLbCdCsN9aQUILDyBJNdul9rReAK9pJ+cNk5EileUX4A==",
                 "jquery.min.js" => "sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo= sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==",
-                "bootstrap.css" => "sha256-GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw= sha384-qAlWxD5RDF+aEdUc1Z7GR/tE4zYjX1Igo/LrIexlnzM6G63a6F1fXZWpZKSrSW86 sha512-VcyUgkobcyhqQl74HS1TcTMnLEfdfX6BbjhH8ZBjFU9YTwHwtoRtWSGzhpDVEJqtMlvLM2z3JIixUOu63PNCYQ==",
+                "bootstrap.css" => "sha256-SlAge5VqSrlDZA7pkxGLVUo06WojJhz+WLmqGAenhJs= sha384-6qOMjEs/dk1B8DWuMdvpXhSoFK8G0LAZAgA0WCuiPYo4zOpviuNw5/7W4qLc2EdE sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1L",
                 "style.css" => "sha256-/hGG6VvbrROl7nKoidSlSfN95EQT6ndBcdVh4617/QM= sha384-95XAnRKooGeuyH48msPbWVmSzKNNgygH84qCUYnk8YIIDer4VpEaKD1i8BPcNLny sha512-5BwNke2Vxk0w955SdZ/taJZffhGhL0FnOPP8cWkgHXCSUJpyxCIPRaS4JzgXvhCnz8Cs3vJ6l52JgZAGEM3Hhw=="
             ];
         }
