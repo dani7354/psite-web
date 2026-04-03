@@ -22,20 +22,22 @@
             <p>
                 <strong>Uddannelse</strong>
                 <br>
-                Master i it, softwarekonstruktion, Aalborg Universitet, 2025-
+                Master i it, softwarekonstruktion, Aalborg Universitet, 2025 -
                 <br>
-                Professionsbachelor i it-sikkerhed, Københavns Erhvervsakademi, 2020-2021
+                Professionsbachelor i it-sikkerhed, Københavns Erhvervsakademi, 2020 - 2021
                 <br>
-                Datamatiker, UCL Erhvervsakademi og Professionshøjskole, 2017-2020
+                Datamatiker, UCL Erhvervsakademi og Professionshøjskole, 2017 - 2020
             </p>
             <p>
                 <strong>Beskæftigelse</strong>
                 <br>
-                Softwareudvikler, Forsvaret, 2023-
+                Softwareudvikler, ABB A/S, 2026 -
                 <br>
-                Softwareudvikler, Hesehus A/S, 2021-2023
+                Softwareudvikler, Forsvaret, 2023 - 2026
                 <br>
-                Studenterprogrammør, ABB A/S, 2020-2021
+                Softwareudvikler, Hesehus A/S, 2021 - 2023
+                <br>
+                Studenterprogrammør, ABB A/S, 2020 - 2021
         </div>
     </div>
 </div>
