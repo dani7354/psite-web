@@ -1,4 +1,4 @@
-ARG debian_release=bookworm
+ARG debian_release=trixie
 
 FROM debian:${debian_release}
 
@@ -13,8 +13,8 @@ RUN apt update && apt install -y \
 ARG debian_release
 ARG php_version=8.5
 
-RUN wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add -
-RUN echo "deb https://packages.sury.org/php/ ${debian_release} main" | tee /etc/apt/sources.list.d/php.list
+RUN wget -q https://packages.sury.org/php/apt.gpg -O- | gpg --dearmor -o /usr/share/keyrings/php-keyring.gpg
+RUN echo "deb [signed-by=/usr/share/keyrings/php-keyring.gpg] https://packages.sury.org/php/ ${debian_release} main" | tee /etc/apt/sources.list.d/php.list
 RUN apt update && apt install -y \
     libapache2-mod-fcgid \
     php${php_version} \
