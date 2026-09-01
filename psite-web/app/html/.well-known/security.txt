@@ -1,0 +1,24 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Canonical: https://stuhrs.dk/.well-known/security.txt
+Contact: mailto:d@stuhrs.dk
+Encryption: https://keys.openpgp.org/vks/v1/by-fingerprint/9ACA000AC11D51D2AE0E02C08FAEF95A8FCCA049
+Preferred-Languages: en, fr, da
+Expires: 2026-12-31T10:00:00Z
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEmsoACsEdUdKuDgLAj675Wo/MoEkFAmqW6KkACgkQj675Wo/M
+oEkp2Q//T9Ae9SJ6+djAyKLL3qO49WX/56e1lg0PqpV2/MJAZ1uwhtURtjJN6lrv
+pLXfyQB4WTq9Y1RyeRHoX1lkmlKE9DwsD68GOZqMQE0EZomzbmOmgmUwENX+ox1E
+ae/QJ6Qjo4YYERvS0BpA3tkAKIdd1Kar6j07I590FTwY4cScJnmsKOaxNcF+Lhm7
+LI18B1UMcFBOa49MIiGPhB4g2fkw2D0/8GZ1UWKms0sASQ1F1WoSLxG1wnCUjK3s
+JCKlnKRCU2RbyiPZ9hYl9SxEf/NwfqS2Vk8ylj9QqKA3BJkwsU1RXfBb+3MijY5N
+VCGRrdGB8BTH5+aVemIz0n/CuMLQN8KqI6426hNB2cTqqHnavAslA9uQ+pcgyhfb
+YxipW9Y+OkpJ9qPApIulRKUS/XJwPJ5O0TgZXTiSlbJpadNzxbmLY0nQv3oApc3Z
+uJXv/zlK1jFb3xJVIOkkNZSpB1j/EiEkztbS+GvaLWh6SSSZN7J8zmnqSq/1hitY
+KAzCntg0PotRISXmBNtPSi5U7w5PcDh/t8agFpbEsT3y8aC+WdWlBera5EliIc56
+DGTwcCdju4sADA5O9nw4wKjaT3xIkN/+MZVamtq3BjutmGyz5eLvVdSCW/DOSets
+y1jlAoi7p8KsEXjCH1X2EGdYNdu1d8/brdbNgqcDYn7NFAE8CZc=
+=xYhV
+-----END PGP SIGNATURE-----
