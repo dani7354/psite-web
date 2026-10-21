@@ -36,11 +36,6 @@ jobs:
         run: |
           ./psite-web/app/vendor/bin/phpstan analyse --configuration=psite-web/app/phpstan.neon --memory-limit=1024M
 
-      - name: PHPUnit Tests
-        uses: php-actions/phpunit@1789d1964b1bfda259b1cb42a72b65299c2cae35 # v4.0.0
-        with:
-          version: "11.1"
-          memory_limit: "1024M"
-          php_version: "8.5"
-          bootstrap: "psite-web/app/initialize.php"
-          configuration: "phpunit.xml"
+      - name: PHUnit Run Tests
+        run: |
+          ./psite-web/app/vendor/bin/phpunit --configuration=phpunit.xml --bootstrap=psite-web/app/initialize.php
